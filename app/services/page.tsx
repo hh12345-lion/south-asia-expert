@@ -30,7 +30,7 @@ export default function ServicesPage() {
         subtitle="CPR Part 35 and Immigration Tribunal Practice Direction compliant reports for all major South Asian asylum profiles."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#374151] leading-relaxed">
+        <p className="mb-8 text-[#2C3A45] leading-relaxed">
           SouthAsiaExpert provides eight specialist expert witness services for UK immigration solicitors, law firms, and
           Legal Aid practitioners. All reports are prepared by qualified South Asia country experts with current CPIN
           knowledge, country guidance expertise, and field research experience across Bangladesh, India, Sri Lanka,
@@ -43,13 +43,13 @@ export default function ServicesPage() {
             description: s.description,
           }))}
         />
-        <p className="mt-8 text-[#374151]">
+        <p className="mt-8 text-[#2C3A45]">
           Questions about instructing an expert? See{" "}
-          <Link href="/how-to-instruct" className="font-semibold text-[#E8751A] hover:underline">
+          <Link href="/how-to-instruct" className="font-semibold text-[#C43B2C] hover:underline">
             how to instruct
           </Link>{" "}
           or{" "}
-          <Link href="/contact" className="font-semibold text-[#E8751A] hover:underline">
+          <Link href="/contact" className="font-semibold text-[#C43B2C] hover:underline">
             contact us
           </Link>
           .

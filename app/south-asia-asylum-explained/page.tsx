@@ -37,13 +37,13 @@ export default function SouthAsiaAsylumExplainedPage() {
         subtitle="Expert evidence, country guidance, CPINs, and profile-specific risk analysis for South Asian asylum appeals."
         breadcrumbs={crumbs}
       >
-        <p className="text-[#374151] leading-relaxed">
+        <p className="text-[#2C3A45] leading-relaxed">
           South Asia is the second most significant asylum claim region in the UK after Sub-Saharan Africa. In the year
           ending September 2025, Bangladesh, India, and Sri Lanka were among the nationalities with the highest number
           of asylum claims from visa holders. This guide explains the legal landscape, key profiles, country guidance
           framework, and the critical role of expert evidence for UK immigration solicitors.
         </p>
-        <p className="mt-4 text-[#374151] leading-relaxed">
+        <p className="mt-4 text-[#2C3A45] leading-relaxed">
           This guide is written for practitioners, not for any political or diaspora audience. It describes asylum
           profiles and country conditions across Bangladesh, India, Sri Lanka, Nepal, and Bhutan with equal analytical
           weight — including opposing political factions, majority and minority religious claims, and return-risk
@@ -51,71 +51,71 @@ export default function SouthAsiaAsylumExplainedPage() {
           side instructs the expert.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#3D1A1A]">South Asia: Key Asylum Statistics</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#0E2433]">South Asia: Key Asylum Statistics</h2>
         <div className="mt-4 table-scroll overflow-x-auto">
           <table className="w-full min-w-[600px] border-collapse text-sm">
             <thead>
-              <tr className="border-b border-[#E8D0C0] bg-[#FDF5F0]">
-                <th className="px-4 py-3 text-left font-semibold text-[#3D1A1A]">Country</th>
-                <th className="px-4 py-3 text-left font-semibold text-[#3D1A1A]">UK Asylum Claim Volume</th>
-                <th className="px-4 py-3 text-left font-semibold text-[#3D1A1A]">Key Profiles</th>
-                <th className="px-4 py-3 text-left font-semibold text-[#3D1A1A]">Country Guidance?</th>
+              <tr className="border-b border-[#C5D0D8] bg-[#DCE5EA]">
+                <th className="px-4 py-3 text-left font-semibold text-[#0E2433]">Country</th>
+                <th className="px-4 py-3 text-left font-semibold text-[#0E2433]">UK Asylum Claim Volume</th>
+                <th className="px-4 py-3 text-left font-semibold text-[#0E2433]">Key Profiles</th>
+                <th className="px-4 py-3 text-left font-semibold text-[#0E2433]">Country Guidance?</th>
               </tr>
             </thead>
             <tbody>
               {countries.map((c) => (
-                <tr key={c.slug} className="border-b border-[#E8D0C0]">
+                <tr key={c.slug} className="border-b border-[#C5D0D8]">
                   <td className="px-4 py-3">
-                    <Link href={`/countries/${c.slug}`} className="font-medium text-[#E8751A] hover:underline">
+                    <Link href={`/countries/${c.slug}`} className="font-medium text-[#C43B2C] hover:underline">
                       {c.title}
                     </Link>
                   </td>
-                  <td className="px-4 py-3 text-[#374151]">{c.claimVolume}</td>
-                  <td className="px-4 py-3 text-[#374151]">{c.keyProfiles}</td>
-                  <td className="px-4 py-3 text-[#374151]">{c.countryGuidance}</td>
+                  <td className="px-4 py-3 text-[#2C3A45]">{c.claimVolume}</td>
+                  <td className="px-4 py-3 text-[#2C3A45]">{c.keyProfiles}</td>
+                  <td className="px-4 py-3 text-[#2C3A45]">{c.countryGuidance}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
 
-        <h2 className="mt-10 text-xl font-bold text-[#3D1A1A]">Bangladesh: The Post-2024 Landscape</h2>
-        <p className="mt-4 text-[#374151] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#0E2433]">Bangladesh: The Post-2024 Landscape</h2>
+        <p className="mt-4 text-[#2C3A45] leading-relaxed">
           The most important recent development in South Asian asylum case law is the August 2024 fall of Sheikh
           Hasina&apos;s Awami League government. Following mass student protests, Hasina fled to India, fundamentally
           altering the asylum landscape. Former BNP and Jamaat supporters who were genuinely persecuted under the
           Awami League may now face changed country conditions arguments. Conversely, Awami League supporters and
           former officials face new risks under the transitional government.
         </p>
-        <p className="mt-4 text-[#374151] leading-relaxed">
+        <p className="mt-4 text-[#2C3A45] leading-relaxed">
           Expert witnesses must assess post-August 2024 conditions in all Bangladesh claims. Pre-2024 country
           information may no longer accurately reflect risk for either BNP or Awami League supporters. Hindu minority
           persecution and LGBTQ+ criminalisation under section 377 PPC remain significant independent claim bases.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#3D1A1A]">India: The Hindutva Question</h2>
-        <p className="mt-4 text-[#374151] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#0E2433]">India: The Hindutva Question</h2>
+        <p className="mt-4 text-[#2C3A45] leading-relaxed">
           India generates growing asylum claim volumes driven by Hindutva and RSS targeting of Muslims, Sikh claims,
           Christian minority persecution, caste discrimination, and political dissident persecution. The Home Office
           frequently deploys internal relocation arguments given India&apos;s size, but expert evidence can challenge
           this where Hindutva networks have national reach.
         </p>
-        <p className="mt-4 text-[#374151] leading-relaxed">
+        <p className="mt-4 text-[#2C3A45] leading-relaxed">
           CAA and NRC concerns affect Muslim appellants from Assam and border states. Expert witnesses assess
           state-level variation in risk, the nationwide reach of Hindutva organisations, and the gap between formal
           legal protections and practical enforcement for minority communities.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#3D1A1A]">Sri Lanka: The KK Country Guidance Framework</h2>
-        <p className="mt-4 text-[#374151] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#0E2433]">Sri Lanka: The KK Country Guidance Framework</h2>
+        <p className="mt-4 text-[#2C3A45] leading-relaxed">
           KK and Others (Sri Lanka: Tamil) CG [2021] UKUT 00245 remains the leading country guidance for Tamil
           asylum claims. It established that Tamil asylum seekers with actual or imputed LTTE associations, high-profile
           diaspora activists, and those who have given evidence against the government face real risk on return.
           Expert witnesses assess individual profiles against this binding framework.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#3D1A1A]">Expert Evidence Without Country Guidance</h2>
-        <p className="mt-4 text-[#374151] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#0E2433]">Expert Evidence Without Country Guidance</h2>
+        <p className="mt-4 text-[#2C3A45] leading-relaxed">
           For Bangladesh, India, Nepal, and Bhutan, where no current UK country guidance exists, independent expert
           evidence is especially important. Expert reports provide detailed, country-specific analysis that goes beyond
           what Home Office CPINs or standard country information covers, addressing the individual risk profile from
@@ -123,20 +123,20 @@ export default function SouthAsiaAsylumExplainedPage() {
           presumptions.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#3D1A1A]">CPIN Coverage for South Asia</h2>
-        <p className="mt-4 text-[#374151] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#0E2433]">CPIN Coverage for South Asia</h2>
+        <p className="mt-4 text-[#2C3A45] leading-relaxed">
           Home Office CPINs cover political parties and religious minorities for Bangladesh, Sikh separatism and
           Muslims for India, Tamils and LTTE for Sri Lanka, and general background for Nepal. Bhutan has limited
           coverage. CPINs may lag behind rapidly changing conditions, particularly for post-August 2024 Bangladesh.
           See our{" "}
-          <Link href="/cpin-country-guidance" className="font-semibold text-[#E8751A] hover:underline">
+          <Link href="/cpin-country-guidance" className="font-semibold text-[#C43B2C] hover:underline">
             CPIN & Country Guidance page
           </Link>{" "}
           for the full South Asia CPIN table.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#3D1A1A]">The Role of Expert Evidence</h2>
-        <p className="mt-4 text-[#374151] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#0E2433]">The Role of Expert Evidence</h2>
+        <p className="mt-4 text-[#2C3A45] leading-relaxed">
           Expert witnesses provide independent, objective country condition reports compliant with CPR Part 35 and
           Immigration Tribunal Practice Direction paragraph 10. Reports address profile-specific risk, challenge generic
           CPIN positions, assess internal relocation viability, and provide current analysis of evolving conditions.

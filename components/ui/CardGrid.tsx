@@ -2,35 +2,47 @@ import Link from "next/link";
 
 type CardItem = { id?: string; title: string; description: string; href?: string };
 
-function CardContent({ item }: { item: CardItem }) {
+function RowContent({ item, index }: { item: CardItem; index: number }) {
   return (
     <>
-      <h3 className="break-words font-semibold text-[#3D1A1A] group-hover:text-[#E8751A]">{item.title}</h3>
-      <p className="prose-safe mt-2 text-sm text-[#374151] leading-relaxed">{item.description}</p>
-      {item.href && <span className="mt-4 inline-block text-sm font-medium text-[#E8751A]">Learn more →</span>}
+      <span className="font-display text-xs tabular-nums text-[#C43B2C]">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+      <div className="min-w-0">
+        <h3 className="font-display break-words text-base font-semibold text-[#0E2433] group-hover:text-[#C43B2C] sm:text-lg">
+          {item.title}
+        </h3>
+        <p className="prose-safe mt-2 text-sm leading-relaxed text-[#2C3A45]">{item.description}</p>
+        {item.href && (
+          <span className="mt-3 inline-block text-xs font-semibold uppercase tracking-wider text-[#1F6B5C]">
+            Open →
+          </span>
+        )}
+      </div>
     </>
   );
 }
 
+/** Editorial dossier rows — deliberately not a card grid */
 export function CardGrid({ items }: { items: CardItem[] }) {
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-      {items.map((item) =>
+    <div className="divide-y divide-[#C5D0D8] border-y border-[#C5D0D8]">
+      {items.map((item, index) =>
         item.href ? (
           <Link
             key={item.href}
             href={item.href}
-            className="group min-h-[44px] min-w-0 rounded-[8px] border border-[#E8D0C0] bg-white p-5 shadow-[0_1px_3px_rgba(0,0,0,0.08),0_4px_16px_rgba(0,0,0,0.06)] transition hover:border-[#3D1A1A] sm:p-6"
+            className="group grid min-h-[44px] min-w-0 grid-cols-[auto_1fr] gap-4 px-1 py-5 transition hover:bg-[#DCE5EA]/40 sm:gap-6 sm:px-3 sm:py-6"
           >
-            <CardContent item={item} />
+            <RowContent item={item} index={index} />
           </Link>
         ) : (
           <div
             key={item.id ?? item.title}
             id={item.id}
-            className="scroll-mt-24 rounded-[8px] border border-[#E8D0C0] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.08),0_4px_16px_rgba(0,0,0,0.06)]"
+            className="scroll-mt-24 grid grid-cols-[auto_1fr] gap-4 px-1 py-5 sm:gap-6 sm:px-3 sm:py-6"
           >
-            <CardContent item={item} />
+            <RowContent item={item} index={index} />
           </div>
         )
       )}

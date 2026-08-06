@@ -4,13 +4,19 @@ export const SITE_NAME = "SouthAsiaExpert";
 export const SITE_EMAIL = "cases@southasiaexpert.com";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/SouthAsiaExpertWitness";
 
+/** Monsoon-ink design tokens — cool paper, deep ink, vermilion, jade */
 export const COLORS = {
-  primary: "#3D1A1A",
-  accent: "#E8751A",
-  highlight: "#1B5E20",
-  background: "#FFFFFF",
-  sectionAlt: "#FDF5F0",
-  border: "#E8D0C0",
-  heading: "#3D1A1A",
-  body: "#374151",
+  primary: "#0E2433",
+  accent: "#C43B2C",
+  highlight: "#1F6B5C",
+  background: "#F5F7F8",
+  sectionAlt: "#DCE5EA",
+  border: "#C5D0D8",
+  heading: "#0E2433",
+  body: "#2C3A45",
+  paper: "#F5F7F8",
+  ink: "#0E2433",
+  vermilion: "#C43B2C",
+  jade: "#1F6B5C",
+  mist: "#DCE5EA",
 } as const;

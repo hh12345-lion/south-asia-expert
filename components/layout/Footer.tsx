@@ -1,87 +1,48 @@
 import Link from "next/link";
 import { CookieSettingsButton } from "@/components/cookies";
 import { SITE_EMAIL } from "@/lib/constants";
-import { asylumProfiles } from "@/data/asylum-profiles";
-import { countries } from "@/data/countries";
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#E8D0C0] bg-[#3D1A1A] text-white">
-      <div className="mx-auto min-w-0 max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4">
-          <div>
-            <h3 className="mb-4 font-semibold text-[#E8751A]">Countries</h3>
-            <ul className="space-y-2 text-sm text-white/80">
-              {countries.map((c) => (
-                <li key={c.slug}>
-                  <Link href={`/countries/${c.slug}`} className="inline-flex min-h-[44px] items-center hover:text-white">
-                    {c.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className="mb-4 font-semibold text-[#E8751A]">Asylum Profiles</h3>
-            <ul className="space-y-2 text-sm text-white/80">
-              {asylumProfiles.slice(0, 5).map((p) => (
-                <li key={p.slug}>
-                  <Link href={`/asylum-profiles/${p.slug}`} className="inline-flex min-h-[44px] items-center hover:text-white">
-                    {p.title}
-                  </Link>
-                </li>
-              ))}
-              <li className="pt-2">
-                <Link href="/asylum-profiles" className="text-[#E8751A] hover:underline">
-                  View all profiles
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="mb-4 font-semibold text-[#E8751A]">Resources</h3>
-            <ul className="space-y-2 text-sm text-white/80">
-              <li><Link href="/south-asia-asylum-explained" className="hover:text-white">South Asia Asylum Explained</Link></li>
-              <li><Link href="/cpin-country-guidance" className="hover:text-white">CPIN & Country Guidance</Link></li>
-              <li><Link href="/guides" className="hover:text-white">Solicitor Guides</Link></li>
-              <li><Link href="/how-to-instruct" className="hover:text-white">How to Instruct</Link></li>
-              <li><Link href="/qualifications" className="hover:text-white">Qualifications</Link></li>
-              <li><Link href="/glossary" className="hover:text-white">Glossary</Link></li>
-              <li><Link href="/what-is-a-south-asia-expert-witness" className="hover:text-white">What is a South Asia Expert Witness?</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="mb-4 font-semibold text-[#E8751A]">Contact</h3>
-            <ul className="space-y-2 text-sm text-white/80">
-              <li>
-                <a href={`mailto:${SITE_EMAIL}`} className="hover:text-white">
-                  {SITE_EMAIL}
-                </a>
-              </li>
-              <li><Link href="/contact" className="font-semibold text-[#E8751A] hover:underline">Contact Us</Link></li>
-            </ul>
-          </div>
+    <footer className="relative mt-auto border-t-[3px] border-[#C43B2C] bg-[#0E2433] text-[#DCE5EA]">
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-10 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8 lg:py-12">
+        <div className="max-w-md">
+          <p className="dossier-label">South Asia · Expert Evidence</p>
+          <p className="font-display mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            SouthAsia<span className="text-[#C43B2C]">Expert</span>
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-white/55">
+            Impartial matching for UK solicitors instructing country expert witnesses across Bangladesh, India, Sri
+            Lanka, Nepal, and Bhutan. Not a law firm.
+          </p>
         </div>
-        <p className="mt-10 border-t border-white/20 pt-6 text-center text-xs text-white/60">
-          SouthAsiaExpert.com connects UK solicitors with qualified South Asia expert witnesses. We are not a law firm
-          and do not provide legal advice. We are not a diaspora organisation or political advocacy group. Content
-          covers Bangladesh, India, Sri Lanka, Nepal, and Bhutan on an impartial basis for tribunal proceedings.
-        </p>
-        <p className="mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-center text-xs text-white/50">
-          <Link href="/privacy" className="inline-flex min-h-[44px] items-center hover:text-white">
-            Privacy
-          </Link>
-          <span aria-hidden="true">·</span>
-          <Link href="/cookie-policy" className="inline-flex min-h-[44px] items-center hover:text-white">
-            Cookie Policy
-          </Link>
-          <span aria-hidden="true">·</span>
-          <Link href="/terms" className="inline-flex min-h-[44px] items-center hover:text-white">
-            Terms
-          </Link>
-          <span aria-hidden="true">·</span>
-          <CookieSettingsButton variant="footer" />
-        </p>
+
+        <div className="flex flex-col gap-4 sm:items-end">
+          <a
+            href={`mailto:${SITE_EMAIL}`}
+            className="font-display text-base text-white transition hover:text-[#C43B2C] sm:text-lg"
+          >
+            {SITE_EMAIL}
+          </a>
+          <nav
+            className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs uppercase tracking-[0.14em] text-white/50"
+            aria-label="Footer"
+          >
+            <Link href="/contact" className="inline-flex min-h-[44px] items-center hover:text-white">
+              Instruct
+            </Link>
+            <Link href="/privacy" className="inline-flex min-h-[44px] items-center hover:text-white">
+              Privacy
+            </Link>
+            <Link href="/cookie-policy" className="inline-flex min-h-[44px] items-center hover:text-white">
+              Cookies
+            </Link>
+            <Link href="/terms" className="inline-flex min-h-[44px] items-center hover:text-white">
+              Terms
+            </Link>
+            <CookieSettingsButton variant="footer" />
+          </nav>
+        </div>
       </div>
     </footer>
   );

@@ -1,5 +1,6 @@
 import { PageShell } from "@/components/layout/PageShell";
 import { ContactForm } from "@/components/forms/ContactForm";
+import { SITE_EMAIL } from "@/lib/constants";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
@@ -13,28 +14,31 @@ export const metadata = createMetadata({
 export default function ContactPage() {
   return (
     <PageShell
-      title="Instruct a South Asia Country Expert Witness"
-      subtitle="Confidential case submission. Response within one business day."
+      title="Instruct a South Asia country expert"
+      subtitle="Five fields. Confidential. Response within one business day."
       breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
     >
-      <div className="grid min-w-0 gap-10 lg:grid-cols-3 lg:gap-12">
-        <div className="min-w-0 lg:col-span-2">
+      <div className="grid min-w-0 gap-12 lg:grid-cols-[1fr_18rem] lg:gap-16">
+        <div className="min-w-0 max-w-xl">
           <ContactForm />
         </div>
-        <aside className="h-fit rounded-[8px] border border-[#E8D0C0] bg-[#FDF5F0] p-5 sm:p-6">
-          <h2 className="font-bold text-[#3D1A1A]">Why instruct through SouthAsiaExpert</h2>
-          <p className="mt-4 text-sm text-[#374151] leading-relaxed">
-            We are an impartial matching service for UK solicitors. Experts instructed through us provide independent
-            tribunal evidence across all five South Asian countries and all major asylum profiles, without affiliation
-            to any political party, diaspora group, or regional interest.
+        <aside className="h-fit border-l-[3px] border-[#1F6B5C] pl-5 sm:pl-6">
+          <p className="dossier-label">Before you write</p>
+          <p className="mt-3 text-sm leading-relaxed text-[#2C3A45]">
+            Impartial matching for UK solicitors — not advocacy, not a law firm. Experts cover Bangladesh, India, Sri
+            Lanka, Nepal, and Bhutan.
           </p>
-          <ul className="mt-4 space-y-4 text-sm text-[#374151]">
-            <li>Five South Asian countries covered: Bangladesh, India, Sri Lanka, Nepal, Bhutan</li>
-            <li>Post-August 2024 Bangladesh and KK [2021] Sri Lanka specialists</li>
+          <ul className="mt-5 space-y-3 text-sm text-[#2C3A45]">
             <li>Legal Aid rates available</li>
-            <li>Immigration Tribunal Practice Direction compliant</li>
-            <li>Response within 1 business day</li>
+            <li>Practice Direction compliant</li>
+            <li>Post-Aug 2024 Bangladesh & KK [2021] specialists</li>
           </ul>
+          <a
+            href={`mailto:${SITE_EMAIL}`}
+            className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#C43B2C] hover:text-[#0E2433]"
+          >
+            {SITE_EMAIL}
+          </a>
         </aside>
       </div>
     </PageShell>

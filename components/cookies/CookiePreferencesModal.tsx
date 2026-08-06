@@ -27,10 +27,10 @@ function CategoryToggle({
   return (
     <div className="flex items-start justify-between gap-4">
       <div className="min-w-0">
-        <p className="font-semibold text-[#3D1A1A]">{label}</p>
-        <p className="mt-1 text-sm text-[#374151] leading-relaxed">{description}</p>
+        <p className="font-semibold text-[#0E2433]">{label}</p>
+        <p className="mt-1 text-sm text-[#2C3A45] leading-relaxed">{description}</p>
         {disabled && (
-          <p className="mt-2 text-xs font-medium uppercase tracking-wide text-[#E8751A]">
+          <p className="mt-2 text-xs font-medium uppercase tracking-wide text-[#C43B2C]">
             Always active
           </p>
         )}
@@ -43,8 +43,8 @@ function CategoryToggle({
         aria-label={`${label} cookies`}
         disabled={disabled}
         onClick={() => !disabled && onChange(!checked)}
-        className={`relative mt-0.5 inline-flex h-7 w-12 shrink-0 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8751A] focus-visible:ring-offset-2 ${
-          disabled ? "cursor-not-allowed bg-[#3D1A1A]/30" : checked ? "bg-[#3D1A1A]" : "bg-[#E8D0C0]"
+        className={`relative mt-0.5 inline-flex h-7 w-12 shrink-0 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C43B2C] focus-visible:ring-offset-2 ${
+          disabled ? "cursor-not-allowed bg-[#0E2433]/30" : checked ? "bg-[#0E2433]" : "bg-[#C5D0D8]"
         }`}
       >
         <span
@@ -105,7 +105,7 @@ export function CookiePreferencesModal() {
     <div className="fixed inset-0 z-[110] flex items-end justify-center sm:items-center sm:p-4">
       <button
         type="button"
-        className="absolute inset-0 bg-[#3D1A1A]/60 backdrop-blur-[3px] animate-[fadeIn_0.2s_ease-out]"
+        className="absolute inset-0 bg-[#0E2433]/60 backdrop-blur-[3px] animate-[fadeIn_0.2s_ease-out]"
         aria-label="Close cookie preferences"
         onClick={closePreferences}
       />
@@ -114,10 +114,10 @@ export function CookiePreferencesModal() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="cookie-prefs-title"
-        className="relative z-10 flex max-h-[min(90vh,720px)] w-full max-w-lg flex-col overflow-hidden rounded-t-[8px] border border-[#E8D0C0] bg-white shadow-[0_24px_64px_rgba(11,45,78,0.28)] sm:rounded-[8px] animate-[slideUp_0.35s_cubic-bezier(0.22,1,0.36,1)]"
+        className="relative z-10 flex max-h-[min(90vh,720px)] w-full max-w-lg flex-col overflow-hidden rounded-t-[8px] border border-[#C5D0D8] bg-white shadow-[0_24px_64px_rgba(11,45,78,0.28)] sm:rounded-none animate-[slideUp_0.35s_cubic-bezier(0.22,1,0.36,1)]"
       >
-        <div className="border-b border-[#E8D0C0] bg-[#3D1A1A] px-5 py-4 sm:px-6">
-          <div className="h-0.5 w-12 rounded-full bg-[#E8751A] mb-3" aria-hidden />
+        <div className="border-b border-[#C5D0D8] bg-[#0E2433] px-5 py-4 sm:px-6">
+          <div className="h-0.5 w-12 rounded-full bg-[#C43B2C] mb-3" aria-hidden />
           <h2 id="cookie-prefs-title" className="text-lg font-bold text-white sm:text-xl">
             Customize cookie preferences
           </h2>
@@ -125,7 +125,7 @@ export function CookiePreferencesModal() {
             Manage how we use cookies.{" "}
             <Link
               href="/cookie-policy"
-              className="font-medium text-[#E8751A] hover:underline"
+              className="font-medium text-[#C43B2C] hover:underline"
               onClick={closePreferences}
             >
               Cookie Policy
@@ -138,7 +138,7 @@ export function CookiePreferencesModal() {
             {CATEGORIES.map((key) => {
               const meta = CATEGORY_META[key];
               return (
-                <li key={key} className="rounded-[8px] border border-[#E8D0C0] bg-[#FDF5F0]/50 p-4">
+                <li key={key} className="rounded-none border border-[#C5D0D8] bg-[#DCE5EA]/50 p-4">
                   <CategoryToggle
                     id={`cookie-toggle-${key}`}
                     label={meta.label}
@@ -153,33 +153,33 @@ export function CookiePreferencesModal() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-2 border-t border-[#E8D0C0] bg-[#FDF5F0] p-4 sm:flex-row sm:flex-wrap sm:justify-end">
+        <div className="flex flex-col gap-2 border-t border-[#C5D0D8] bg-[#DCE5EA] p-4 sm:flex-row sm:flex-wrap sm:justify-end">
           <button
             type="button"
             ref={closeBtnRef}
             onClick={closePreferences}
-            className="min-h-[44px] rounded-[8px] border border-[#E8D0C0] bg-white px-4 py-2 text-sm font-medium text-[#374151] hover:bg-[#FDF5F0]"
+            className="min-h-[44px] rounded-none border border-[#C5D0D8] bg-white px-4 py-2 text-sm font-medium text-[#2C3A45] hover:bg-[#DCE5EA]"
           >
             Cancel
           </button>
           <button
             type="button"
             onClick={rejectNonEssential}
-            className="min-h-[44px] rounded-[8px] border border-[#3D1A1A] bg-white px-4 py-2 text-sm font-semibold text-[#3D1A1A] hover:bg-[#FDF5F0]"
+            className="min-h-[44px] rounded-none border border-[#0E2433] bg-white px-4 py-2 text-sm font-semibold text-[#0E2433] hover:bg-[#DCE5EA]"
           >
             Reject Non-Essential
           </button>
           <button
             type="button"
             onClick={() => savePreferences(draft)}
-            className="min-h-[44px] rounded-[8px] bg-[#3D1A1A] px-4 py-2 text-sm font-semibold text-white hover:bg-[#2D1212]"
+            className="min-h-[44px] rounded-none bg-[#0E2433] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0A1A24]"
           >
             Save preferences
           </button>
           <button
             type="button"
             onClick={acceptAll}
-            className="min-h-[44px] rounded-[8px] bg-[#E8751A] px-4 py-2 text-sm font-semibold text-white hover:bg-[#d0640f]"
+            className="min-h-[44px] rounded-none bg-[#C43B2C] px-4 py-2 text-sm font-semibold text-white hover:bg-[#A83226]"
           >
             Accept All
           </button>

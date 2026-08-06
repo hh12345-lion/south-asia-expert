@@ -4,11 +4,11 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { SITE_EMAIL } from "@/lib/constants";
 import { postSubmitLead } from "@/lib/submit-lead";
-import { CASE_PROFILES, COUNTRIES, FUNDING_OPTIONS, PROCEEDINGS, URGENCY_OPTIONS } from "@/data/contact-options";
+import { COUNTRIES } from "@/data/contact-options";
 
 const inputClass =
-  "w-full min-w-0 rounded-[8px] border border-[#E8D0C0] px-4 py-3 text-base text-[#374151] focus:border-[#3D1A1A] focus:outline-none focus:ring-1 focus:ring-[#3D1A1A] min-h-[44px]";
-const labelClass = "mb-1 block text-sm font-medium text-[#3D1A1A]";
+  "w-full min-w-0 border-0 border-b border-[#C5D0D8] bg-transparent px-0 py-3 text-base text-[#2C3A45] placeholder:text-[#2C3A45]/40 focus:border-[#C43B2C] focus:outline-none focus:ring-0 min-h-[44px]";
+const labelClass = "dossier-label mb-2 block";
 
 export function ContactForm() {
   const router = useRouter();
@@ -24,13 +24,13 @@ export function ContactForm() {
       fullName: String(data.get("name") ?? "").trim(),
       organisation: String(data.get("law_firm") ?? "").trim(),
       email: String(data.get("email") ?? "").trim(),
-      phone: String(data.get("phone") ?? "").trim(),
-      caseProfile: String(data.get("case_profile") ?? "").trim(),
+      phone: "",
+      caseProfile: "",
       region: String(data.get("country") ?? "").trim(),
-      proceedings: String(data.get("proceedings") ?? "").trim(),
-      funding: String(data.get("funding") ?? "").trim(),
-      deadline: String(data.get("deadline") ?? "").trim(),
-      urgency: String(data.get("urgency") ?? "").trim(),
+      proceedings: "",
+      funding: "",
+      deadline: "",
+      urgency: "",
       summary: String(data.get("summary") ?? "").trim(),
     };
 
@@ -40,130 +40,74 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="min-w-0 space-y-5">
-      <div className="grid min-w-0 gap-5 sm:grid-cols-2">
-        <div className="min-w-0">
-          <label className={labelClass} htmlFor="name">
-            Full Name *
-          </label>
-          <input id="name" name="name" required autoComplete="name" className={inputClass} />
-        </div>
-        <div className="min-w-0">
-          <label className={labelClass} htmlFor="law_firm">
-            Law Firm *
-          </label>
-          <input id="law_firm" name="law_firm" required autoComplete="organization" className={inputClass} />
-        </div>
-        <div className="min-w-0">
-          <label className={labelClass} htmlFor="email">
-            Email *
-          </label>
-          <input id="email" type="email" name="email" required autoComplete="email" className={inputClass} />
-        </div>
-        <div className="min-w-0">
-          <label className={labelClass} htmlFor="phone">
-            Phone
-          </label>
-          <input id="phone" type="tel" name="phone" autoComplete="tel" className={inputClass} />
-        </div>
+    <form onSubmit={handleSubmit} className="min-w-0 space-y-8">
+      <div className="min-w-0">
+        <label className={labelClass} htmlFor="name">
+          Full name *
+        </label>
+        <input id="name" name="name" required autoComplete="name" className={inputClass} placeholder="Your name" />
       </div>
 
-      <div className="grid min-w-0 gap-5 sm:grid-cols-2">
-        <div className="min-w-0">
-          <label className={labelClass} htmlFor="country">
-            Country
-          </label>
-          <select id="country" name="country" className={inputClass}>
-            <option value="">Select country</option>
-            {COUNTRIES.map((c) => (
-              <option key={c} value={c}>
-                {c}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="min-w-0">
-          <label className={labelClass} htmlFor="case_profile">
-            Profile
-          </label>
-          <select id="case_profile" name="case_profile" className={inputClass}>
-            <option value="">Select profile</option>
-            {CASE_PROFILES.map((p) => (
-              <option key={p} value={p}>
-                {p}
-              </option>
-            ))}
-          </select>
-        </div>
+      <div className="min-w-0">
+        <label className={labelClass} htmlFor="law_firm">
+          Law firm *
+        </label>
+        <input
+          id="law_firm"
+          name="law_firm"
+          required
+          autoComplete="organization"
+          className={inputClass}
+          placeholder="Firm name"
+        />
       </div>
 
-      <div className="grid min-w-0 gap-5 sm:grid-cols-2">
-        <div className="min-w-0">
-          <label className={labelClass} htmlFor="proceedings">
-            Proceedings
-          </label>
-          <select id="proceedings" name="proceedings" className={inputClass}>
-            <option value="">Select proceedings</option>
-            {PROCEEDINGS.map((p) => (
-              <option key={p} value={p}>
-                {p}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="min-w-0">
-          <label className={labelClass} htmlFor="funding">
-            Funding
-          </label>
-          <select id="funding" name="funding" className={inputClass}>
-            <option value="">Select funding</option>
-            {FUNDING_OPTIONS.map((f) => (
-              <option key={f} value={f}>
-                {f}
-              </option>
-            ))}
-          </select>
-        </div>
+      <div className="min-w-0">
+        <label className={labelClass} htmlFor="email">
+          Email *
+        </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          required
+          autoComplete="email"
+          className={inputClass}
+          placeholder="you@firm.co.uk"
+        />
       </div>
 
-      <div className="grid min-w-0 gap-5 sm:grid-cols-2">
-        <div className="min-w-0">
-          <label className={labelClass} htmlFor="deadline">
-            Deadline / hearing date
-          </label>
-          <input id="deadline" type="date" name="deadline" className={inputClass} />
-        </div>
-        <div className="min-w-0">
-          <label className={labelClass} htmlFor="urgency">
-            Urgency
-          </label>
-          <select id="urgency" name="urgency" className={inputClass}>
-            <option value="">Select urgency</option>
-            {URGENCY_OPTIONS.map((u) => (
-              <option key={u} value={u}>
-                {u}
-              </option>
-            ))}
-          </select>
-        </div>
+      <div className="min-w-0">
+        <label className={labelClass} htmlFor="country">
+          Country of claim
+        </label>
+        <select id="country" name="country" className={`${inputClass} cursor-pointer`}>
+          <option value="">Select if known</option>
+          {COUNTRIES.map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="min-w-0">
         <label className={labelClass} htmlFor="summary">
-          Brief case description *
+          Brief note *
         </label>
         <textarea
           id="summary"
           name="summary"
           required
-          rows={5}
-          className={`${inputClass} min-h-[120px] resize-y`}
+          rows={3}
+          placeholder="Hearing date, profile, and anything urgent — a few lines is enough."
+          className={`${inputClass} min-h-[96px] resize-y`}
         />
       </div>
 
       {status === "error" && (
-        <p className="rounded-[8px] border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
-          Something went wrong. Please try again or email us at{" "}
+        <p className="border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+          Something went wrong. Email{" "}
           <a href={`mailto:${SITE_EMAIL}`} className="font-medium underline">
             {SITE_EMAIL}
           </a>
@@ -174,9 +118,9 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] bg-[#E8751A] px-6 py-3 text-base font-semibold text-white hover:bg-[#d0640f] disabled:opacity-60 sm:w-auto"
+        className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#C43B2C] px-8 py-3 text-base font-semibold text-white transition hover:bg-[#0E2433] disabled:opacity-60 sm:w-auto"
       >
-        {status === "loading" ? "Submitting..." : "Instruct an Expert"}
+        {status === "loading" ? "Sending…" : "Send enquiry"}
       </button>
     </form>
   );

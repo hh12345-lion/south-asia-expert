@@ -12,13 +12,13 @@ export const metadata = createMetadata({
 export default function ThankYouPage() {
   return (
     <>
-      <section className="bg-[#3D1A1A] py-16 md:py-24">
+      <section className="bg-[#0E2433] py-16 md:py-24">
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
           <div
-            className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#E8751A]/20"
+            className="mx-auto flex h-16 w-16 items-center justify-center border border-[#C43B2C]/40 bg-[#C43B2C]/15"
             aria-hidden="true"
           >
-            <svg className="h-8 w-8 text-[#E8751A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="h-8 w-8 text-[#C43B2C]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
@@ -32,13 +32,13 @@ export default function ThankYouPage() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/"
-              className="inline-flex min-h-[44px] min-w-[200px] items-center justify-center rounded-[8px] bg-[#E8751A] px-8 py-3 font-semibold text-white transition hover:bg-[#d0640f]"
+              className="inline-flex min-h-[44px] min-w-[200px] items-center justify-center rounded-none bg-[#C43B2C] px-8 py-3 font-semibold text-white transition hover:bg-[#A83226]"
             >
               Return to Homepage
             </Link>
             <Link
               href="/services"
-              className="inline-flex min-h-[44px] min-w-[200px] items-center justify-center rounded-[8px] border-2 border-white px-8 py-3 font-semibold text-white transition hover:bg-white/10"
+              className="inline-flex min-h-[44px] min-w-[200px] items-center justify-center rounded-none border-2 border-white px-8 py-3 font-semibold text-white transition hover:bg-white/10"
             >
               View Services
             </Link>
@@ -46,9 +46,9 @@ export default function ThankYouPage() {
         </div>
       </section>
 
-      <section className="bg-[#FDF5F0] py-12">
-        <div className="mx-auto max-w-2xl px-4 text-center text-[#374151] sm:px-6">
-          <h2 className="text-lg font-semibold text-[#3D1A1A]">What happens next?</h2>
+      <section className="bg-[#DCE5EA] py-12">
+        <div className="mx-auto max-w-2xl px-4 text-center text-[#2C3A45] sm:px-6">
+          <h2 className="text-lg font-semibold text-[#0E2433]">What happens next?</h2>
           <ul className="mt-4 space-y-3 text-left text-sm leading-relaxed">
             <li>We review your case details and match you with a qualified South Asia expert witness.</li>
             <li>You receive a response within one business day with proposed scope and timeline.</li>
@@ -56,7 +56,7 @@ export default function ThankYouPage() {
           </ul>
           <Link
             href="/how-to-instruct"
-            className="mt-6 inline-flex min-h-[44px] items-center font-semibold text-[#E8751A] hover:underline"
+            className="mt-6 inline-flex min-h-[44px] items-center font-semibold text-[#C43B2C] hover:underline"
           >
             How to instruct a South Asia expert witness
           </Link>

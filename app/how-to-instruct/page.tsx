@@ -60,21 +60,21 @@ export default function HowToInstructPage() {
         subtitle="Seven steps for UK immigration solicitors and Legal Aid practitioners."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 max-w-3xl text-[#374151] leading-relaxed">
+        <p className="mb-8 max-w-3xl text-[#2C3A45] leading-relaxed">
           Experts instructed through SouthAsiaExpert are selected for academic and field-research qualifications, not
           political alignment. The expert&apos;s duty is to the tribunal under CPR Part 35 — to provide impartial
           country analysis whether the solicitor acts for the appellant or the respondent, and regardless of which
           South Asian country or asylum profile is at issue.
         </p>
-        <div className="space-y-6">
+        <div className="divide-y divide-[#C5D0D8] border-y border-[#C5D0D8]">
           {steps.map((s) => (
-            <div key={s.n} className="flex gap-4 rounded-[8px] border border-[#E8D0C0] bg-white p-6">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#3D1A1A] font-bold text-white">
-                {s.n}
+            <div key={s.n} className="grid grid-cols-[auto_1fr] gap-4 py-6 sm:gap-6">
+              <span className="font-display text-xs tabular-nums text-[#C43B2C]">
+                {String(s.n).padStart(2, "0")}
               </span>
               <div>
-                <h2 className="font-bold text-[#3D1A1A]">{s.title}</h2>
-                <p className="mt-2 text-[#374151]">{s.body}</p>
+                <h2 className="font-display font-semibold text-[#0E2433]">{s.title}</h2>
+                <p className="mt-2 leading-relaxed text-[#2C3A45]">{s.body}</p>
               </div>
             </div>
           ))}
@@ -89,7 +89,7 @@ export default function HowToInstructPage() {
         />
         <Link
           href="/contact"
-          className="mt-8 inline-flex min-h-[44px] items-center rounded-[8px] bg-[#E8751A] px-6 py-3 font-semibold text-white"
+          className="mt-8 inline-flex min-h-[44px] items-center rounded-none bg-[#C43B2C] px-6 py-3 font-semibold text-white"
         >
           Instruct an Expert
         </Link>

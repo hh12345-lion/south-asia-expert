@@ -13,19 +13,27 @@ export default function OpenGraphImage() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#3D1A1A",
-          padding: 80,
+          justifyContent: "flex-end",
+          backgroundColor: "#0E2433",
+          padding: 64,
+          backgroundImage:
+            "linear-gradient(135deg, #0E2433 0%, #0E2433 55%, #1F6B5C 100%)",
         }}
       >
         <div
           style={{
-            fontSize: 72,
+            width: 64,
+            height: 4,
+            backgroundColor: "#C43B2C",
+            marginBottom: 28,
+          }}
+        />
+        <div
+          style={{
+            fontSize: 56,
             fontWeight: 700,
             color: "#FFFFFF",
-            letterSpacing: "-0.02em",
-            textAlign: "center",
+            letterSpacing: "-0.03em",
             lineHeight: 1.1,
           }}
         >
@@ -33,15 +41,15 @@ export default function OpenGraphImage() {
         </div>
         <p
           style={{
-            marginTop: 32,
-            fontSize: 36,
-            fontWeight: 600,
-            color: "#E8751A",
-            textAlign: "center",
-            lineHeight: 1.3,
+            marginTop: 20,
+            fontSize: 28,
+            fontWeight: 500,
+            color: "#DCE5EA",
+            lineHeight: 1.35,
+            maxWidth: 800,
           }}
         >
-          South Asia Expert Witness Services UK
+          Country expert evidence for Bangladesh, India, Sri Lanka, Nepal & Bhutan
         </p>
       </div>
     ),

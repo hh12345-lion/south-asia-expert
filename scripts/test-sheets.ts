@@ -1,7 +1,7 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-import { appendRow } from "../lib/google-sheets";
-import { LEAD_BRAND_NAME, LEAD_SHEET_COLUMNS } from "../lib/submit-lead";
+import { appendRow, ensureHeaderRow, getSpreadsheetInfo, readRows } from "../lib/google-sheets";
+import { LEAD_BRAND_NAME, LEAD_SHEET_COLUMNS, buildLeadSheetRow } from "../lib/submit-lead";
 
 function loadEnvLocal() {
   try {
@@ -29,31 +29,62 @@ function loadEnvLocal() {
 loadEnvLocal();
 
 async function test() {
-  console.log("Testing Google Sheets connection...\n");
+  console.log("--- Testing Google Sheets Connection ---\n");
   console.log("Expected header row (Row 1):", LEAD_SHEET_COLUMNS.join(" | "));
+  console.log("Tab:", process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1");
+  console.log("");
 
   try {
-    const result = await appendRow([
-      new Date().toISOString(),
-      "Test Entry",
-      "Test Law Firm",
-      "test@example.com",
-      "+44 7700 900000",
-      "Political Persecution",
-      "Bangladesh",
-      "First-tier Tribunal (FTT)",
-      "Legal Aid",
-      "",
-      "Standard (7+ days)",
-      "Test submission from development environment.",
-      LEAD_BRAND_NAME,
-    ]);
-    console.log("Row written:", result.updatedRange);
-    console.log("\nAll tests passed.");
+    const info = await getSpreadsheetInfo();
+    console.log("✅ Spreadsheet found:", info.title);
+    console.log("   Tabs:", info.sheets?.map((s) => s.name).join(", "));
   } catch (error) {
-    console.error("Failed:", error instanceof Error ? error.message : error);
+    console.error("❌ Failed to read spreadsheet info:", error instanceof Error ? error.message : error);
     process.exit(1);
   }
+
+  try {
+    await ensureHeaderRow([...LEAD_SHEET_COLUMNS]);
+    console.log("✅ Header row ensured");
+  } catch (error) {
+    console.error("❌ Failed to ensure header:", error instanceof Error ? error.message : error);
+    process.exit(1);
+  }
+
+  try {
+    const result = await appendRow(
+      buildLeadSheetRow({
+        fullName: "Test Entry",
+        organisation: "Test Law Firm",
+        email: "test@example.com",
+        phone: "+44 7700 900000",
+        caseProfile: "Political Persecution",
+        region: "Bangladesh",
+        proceedings: "First-tier Tribunal (FTT)",
+        funding: "Legal Aid",
+        deadline: "",
+        urgency: "Standard (7+ days)",
+        summary: "Test submission from development environment.",
+      })
+    );
+    console.log("✅ Row written:", result.updatedRange);
+    console.log("   Brand column:", LEAD_BRAND_NAME);
+  } catch (error) {
+    console.error("❌ Failed to write row:", error instanceof Error ? error.message : error);
+    process.exit(1);
+  }
+
+  try {
+    const result = await readRows();
+    console.log(`✅ Read ${result.rows.length} rows (including header)`);
+    console.log("   Header:", result.rows[0]);
+    console.log("   Last row:", result.rows[result.rows.length - 1]);
+  } catch (error) {
+    console.error("❌ Failed to read rows:", error instanceof Error ? error.message : error);
+    process.exit(1);
+  }
+
+  console.log("\n--- All tests passed ---");
 }
 
 test();
