@@ -96,7 +96,8 @@ async function appendLeadToSheet(row) {
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
   const sheets = google.sheets({ version: "v4", auth });
-  const sheetName = process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1";
+  // Single tab only — never Contact/Instruct split tabs
+  const sheetName = process.env.GOOGLE_SHEET_TAB_NAME || "Southasia Expert";
   const escaped = sheetName.replace(/'/g, "''");
 
   await sheets.spreadsheets.values.append({

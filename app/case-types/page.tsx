@@ -23,7 +23,7 @@ export default function CaseTypesPage() {
         subtitle="Expert witness evidence for all major UK immigration tribunal proceedings involving South Asian nationals."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#2C3A45] leading-relaxed">
+        <p className="mb-8 text-[#3A4250] leading-relaxed">
           SouthAsiaExpert provides qualified country expert witnesses for First-tier Tribunal appeals, Upper Tribunal
           proceedings, Bangladesh political claims, India minority claims, Sri Lanka Tamil claims under KK [2021],
           deportation and removal, fresh claims, and certification challenges.
@@ -35,13 +35,13 @@ export default function CaseTypesPage() {
             href: `/case-types/${c.slug}`,
           }))}
         />
-        <p className="mt-8 text-[#2C3A45]">
+        <p className="mt-8 text-[#3A4250]">
           See also our{" "}
-          <Link href="/asylum-profiles" className="font-semibold text-[#C43B2C] hover:underline">
+          <Link href="/asylum-profiles" className="font-semibold text-[#7C6C4F] hover:underline">
             asylum profiles hub
           </Link>{" "}
           and{" "}
-          <Link href="/countries" className="font-semibold text-[#C43B2C] hover:underline">
+          <Link href="/countries" className="font-semibold text-[#7C6C4F] hover:underline">
             country pages
           </Link>
           .

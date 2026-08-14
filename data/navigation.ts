@@ -22,7 +22,7 @@ export const resourcesNavLinks = [
   { label: "South Asia Asylum Explained", href: "/south-asia-asylum-explained" },
   { label: "CPIN & Country Guidance", href: "/cpin-country-guidance" },
   { label: "Solicitor Guides", href: "/guides" },
-  { label: "How to Instruct", href: "/how-to-instruct" },
+  { label: "How matching works", href: "/how-to-instruct" },
   { label: "Qualifications", href: "/qualifications" },
   { label: "Glossary", href: "/glossary" },
 ] as const;

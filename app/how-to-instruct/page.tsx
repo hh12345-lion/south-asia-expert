@@ -50,31 +50,31 @@ const steps = [
 ];
 
 export default function HowToInstructPage() {
-  const crumbs = [{ label: "Home", href: "/" }, { label: "How to Instruct" }];
+  const crumbs = [{ label: "Home", href: "/" }, { label: "How matching works" }];
 
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
-        title="How to Instruct a South Asia Expert Witness"
+        title="How matching a South Asia expert works"
         subtitle="Seven steps for UK immigration solicitors and Legal Aid practitioners."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 max-w-3xl text-[#2C3A45] leading-relaxed">
+        <p className="mb-8 max-w-3xl text-[#3A4250] leading-relaxed">
           Experts instructed through SouthAsiaExpert are selected for academic and field-research qualifications, not
           political alignment. The expert&apos;s duty is to the tribunal under CPR Part 35 — to provide impartial
           country analysis whether the solicitor acts for the appellant or the respondent, and regardless of which
           South Asian country or asylum profile is at issue.
         </p>
-        <div className="divide-y divide-[#C5D0D8] border-y border-[#C5D0D8]">
+        <div className="divide-y divide-[#D8D4CC] border-y border-[#D8D4CC]">
           {steps.map((s) => (
             <div key={s.n} className="grid grid-cols-[auto_1fr] gap-4 py-6 sm:gap-6">
-              <span className="font-display text-xs tabular-nums text-[#C43B2C]">
+              <span className="font-display text-xs tabular-nums text-[#7C6C4F]">
                 {String(s.n).padStart(2, "0")}
               </span>
               <div>
-                <h2 className="font-display font-semibold text-[#0E2433]">{s.title}</h2>
-                <p className="mt-2 leading-relaxed text-[#2C3A45]">{s.body}</p>
+                <h2 className="font-display font-semibold text-[#1C2541]">{s.title}</h2>
+                <p className="mt-2 leading-relaxed text-[#3A4250]">{s.body}</p>
               </div>
             </div>
           ))}
@@ -84,14 +84,14 @@ export default function HowToInstructPage() {
           links={[
             { label: "Instructing guide", href: "/guides/instructing-south-asia-expert" },
             { label: "Qualifications", href: "/qualifications" },
-            { label: "Contact us", href: "/contact" },
+            { label: "Brief an expert", href: "/contact" },
           ]}
         />
         <Link
           href="/contact"
-          className="mt-8 inline-flex min-h-[44px] items-center rounded-none bg-[#C43B2C] px-6 py-3 font-semibold text-white"
+          className="mt-8 inline-flex min-h-[44px] items-center bg-[#7C6C4F] px-6 py-3 font-semibold text-white hover:bg-[#1C2541]"
         >
-          Instruct an Expert
+          Brief an expert
         </Link>
       </PageShell>
     </>

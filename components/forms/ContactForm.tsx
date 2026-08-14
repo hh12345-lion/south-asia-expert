@@ -4,11 +4,10 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { SITE_EMAIL } from "@/lib/constants";
 import { postSubmitLead } from "@/lib/submit-lead";
-import { COUNTRIES } from "@/data/contact-options";
 
 const inputClass =
-  "w-full min-w-0 border-0 border-b border-[#C5D0D8] bg-transparent px-0 py-3 text-base text-[#2C3A45] placeholder:text-[#2C3A45]/40 focus:border-[#C43B2C] focus:outline-none focus:ring-0 min-h-[44px]";
-const labelClass = "dossier-label mb-2 block";
+  "w-full min-w-0 border border-[#D8D4CC] border-l-4 border-l-[#7C6C4F] bg-white px-3 py-3 text-base text-[#3A4250] placeholder:text-[#5A6472]/60 focus:border-[#1C2541] focus:border-l-[#7C6C4F] focus:outline-none min-h-[44px]";
+const labelClass = "mb-2 block text-sm font-semibold text-[#1C2541]";
 
 export function ContactForm() {
   const router = useRouter();
@@ -26,7 +25,7 @@ export function ContactForm() {
       email: String(data.get("email") ?? "").trim(),
       phone: "",
       caseProfile: "",
-      region: String(data.get("country") ?? "").trim(),
+      region: "",
       proceedings: "",
       funding: "",
       deadline: "",
@@ -40,7 +39,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="min-w-0 space-y-8">
+    <form onSubmit={handleSubmit} className="min-w-0 space-y-6">
       <div className="min-w-0">
         <label className={labelClass} htmlFor="name">
           Full name *
@@ -78,30 +77,16 @@ export function ContactForm() {
       </div>
 
       <div className="min-w-0">
-        <label className={labelClass} htmlFor="country">
-          Country of claim
-        </label>
-        <select id="country" name="country" className={`${inputClass} cursor-pointer`}>
-          <option value="">Select if known</option>
-          {COUNTRIES.map((c) => (
-            <option key={c} value={c}>
-              {c}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div className="min-w-0">
         <label className={labelClass} htmlFor="summary">
-          Brief note *
+          Case note *
         </label>
         <textarea
           id="summary"
           name="summary"
           required
-          rows={3}
-          placeholder="Hearing date, profile, and anything urgent — a few lines is enough."
-          className={`${inputClass} min-h-[96px] resize-y`}
+          rows={4}
+          placeholder="Country, profile, hearing date, and anything urgent."
+          className={`${inputClass} min-h-[112px] resize-y`}
         />
       </div>
 
@@ -118,9 +103,9 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#C43B2C] px-8 py-3 text-base font-semibold text-white transition hover:bg-[#0E2433] disabled:opacity-60 sm:w-auto"
+        className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#7C6C4F] px-8 py-3 text-base font-semibold text-white transition hover:bg-[#1C2541] disabled:opacity-60 sm:w-auto"
       >
-        {status === "loading" ? "Sending…" : "Send enquiry"}
+        {status === "loading" ? "Sending…" : "Submit brief"}
       </button>
     </form>
   );

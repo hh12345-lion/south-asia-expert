@@ -1,4 +1,5 @@
 import { google, sheets_v4 } from "googleapis";
+import { SHEET_TAB_NAME } from "@/lib/constants";
 
 // ─── Auth ────────────────────────────────────────────────────────────────────
 
@@ -58,7 +59,7 @@ export async function ensureHeaderRow(
   const first = existing.rows[0]?.[0];
   if (first != null && String(first).trim() === headers[0]) return;
 
-  const sheetName = target?.sheetName || process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1";
+  const sheetName = target?.sheetName || process.env.GOOGLE_SHEET_TAB_NAME || SHEET_TAB_NAME;
   await updateRange(`${sheetName}!A1`, [headers], target);
 }
 
@@ -72,7 +73,7 @@ export async function appendRow(
 ): Promise<AppendResult> {
   const sheets = getSheetsClient();
   const spreadsheetId = target?.spreadsheetId || process.env.GOOGLE_SHEET_ID;
-  const sheetName = target?.sheetName || process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1";
+  const sheetName = target?.sheetName || process.env.GOOGLE_SHEET_TAB_NAME || SHEET_TAB_NAME;
 
   if (!spreadsheetId) {
     throw new Error("Missing spreadsheet ID: set GOOGLE_SHEET_ID or pass spreadsheetId");
@@ -104,7 +105,7 @@ export async function appendRows(
 ): Promise<AppendResult> {
   const sheets = getSheetsClient();
   const spreadsheetId = target?.spreadsheetId || process.env.GOOGLE_SHEET_ID;
-  const sheetName = target?.sheetName || process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1";
+  const sheetName = target?.sheetName || process.env.GOOGLE_SHEET_TAB_NAME || SHEET_TAB_NAME;
 
   if (!spreadsheetId) {
     throw new Error("Missing spreadsheet ID: set GOOGLE_SHEET_ID or pass spreadsheetId");
@@ -166,7 +167,7 @@ export async function readRows(
 ): Promise<ReadResult> {
   const sheets = getSheetsClient();
   const spreadsheetId = target?.spreadsheetId || process.env.GOOGLE_SHEET_ID;
-  const sheetName = target?.sheetName || process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1";
+  const sheetName = target?.sheetName || process.env.GOOGLE_SHEET_TAB_NAME || SHEET_TAB_NAME;
 
   if (!spreadsheetId) {
     throw new Error("Missing spreadsheet ID");

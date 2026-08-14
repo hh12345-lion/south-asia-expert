@@ -2,47 +2,38 @@ import Link from "next/link";
 
 type CardItem = { id?: string; title: string; description: string; href?: string };
 
-function RowContent({ item, index }: { item: CardItem; index: number }) {
+function RowContent({ item }: { item: CardItem }) {
   return (
-    <>
-      <span className="font-display text-xs tabular-nums text-[#C43B2C]">
-        {String(index + 1).padStart(2, "0")}
-      </span>
-      <div className="min-w-0">
-        <h3 className="font-display break-words text-base font-semibold text-[#0E2433] group-hover:text-[#C43B2C] sm:text-lg">
-          {item.title}
-        </h3>
-        <p className="prose-safe mt-2 text-sm leading-relaxed text-[#2C3A45]">{item.description}</p>
-        {item.href && (
-          <span className="mt-3 inline-block text-xs font-semibold uppercase tracking-wider text-[#1F6B5C]">
-            Open →
-          </span>
-        )}
-      </div>
-    </>
+    <div className="min-w-0">
+      <h3 className="font-display break-words text-base font-semibold text-[#1C2541] group-hover:text-[#7C6C4F] sm:text-lg">
+        {item.title}
+      </h3>
+      <p className="prose-safe mt-2 text-sm leading-relaxed text-[#3A4250]">{item.description}</p>
+      {item.href && <span className="mt-3 inline-block text-sm font-semibold text-[#3D5A80]">Open</span>}
+    </div>
   );
 }
 
-/** Editorial dossier rows — deliberately not a card grid */
+/** Stacked bronze-rule rows — not a card grid or numbered dossier */
 export function CardGrid({ items }: { items: CardItem[] }) {
   return (
-    <div className="divide-y divide-[#C5D0D8] border-y border-[#C5D0D8]">
-      {items.map((item, index) =>
+    <div className="space-y-0">
+      {items.map((item) =>
         item.href ? (
           <Link
             key={item.href}
             href={item.href}
-            className="group grid min-h-[44px] min-w-0 grid-cols-[auto_1fr] gap-4 px-1 py-5 transition hover:bg-[#DCE5EA]/40 sm:gap-6 sm:px-3 sm:py-6"
+            className="group block min-h-[44px] min-w-0 border-l-4 border-[#7C6C4F] bg-white px-4 py-5 transition hover:bg-[#EBE6DC] sm:px-5"
           >
-            <RowContent item={item} index={index} />
+            <RowContent item={item} />
           </Link>
         ) : (
           <div
             key={item.id ?? item.title}
             id={item.id}
-            className="scroll-mt-24 grid grid-cols-[auto_1fr] gap-4 px-1 py-5 sm:gap-6 sm:px-3 sm:py-6"
+            className="scroll-mt-24 border-l-4 border-[#D8D4CC] bg-white px-4 py-5 sm:px-5"
           >
-            <RowContent item={item} index={index} />
+            <RowContent item={item} />
           </div>
         )
       )}

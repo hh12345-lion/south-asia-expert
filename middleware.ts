@@ -1,12 +1,19 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { SEO_SLUG_REDIRECTS } from "@/lib/seo/slug-redirects";
+import { LANDING_REDIRECT_PREFIXES, SEO_SLUG_REDIRECTS } from "@/lib/seo/slug-redirects";
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname.replace(/\/$/, "") || "/";
-  const redirectPath = SEO_SLUG_REDIRECTS[pathname];
-  if (redirectPath) {
-    const url = new URL(redirectPath + request.nextUrl.search, request.url);
+  const exact = SEO_SLUG_REDIRECTS[pathname];
+  if (exact) {
+    const url = new URL(exact + request.nextUrl.search, request.url);
+    return NextResponse.redirect(url, 301);
+  }
+
+  if (
+    LANDING_REDIRECT_PREFIXES.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))
+  ) {
+    const url = new URL("/" + request.nextUrl.search, request.url);
     return NextResponse.redirect(url, 301);
   }
 

@@ -1,8 +1,4 @@
 import { SITE_URL } from "../constants";
-import { asylumProfiles } from "../../data/asylum-profiles";
-import { caseTypes } from "../../data/case-types";
-import { countries } from "../../data/countries";
-import { guides } from "../../data/guides";
 
 export type PublicUrlEntry = {
   path: string;
@@ -10,58 +6,16 @@ export type PublicUrlEntry = {
   changefreq: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
 };
 
+/** Public indexable URLs for the landing-page site */
 export const APP_STATIC_PATHS: PublicUrlEntry[] = [
   { path: "/", priority: 1.0, changefreq: "weekly" },
-  { path: "/south-asia-asylum-explained", priority: 0.95, changefreq: "monthly" },
-  { path: "/countries", priority: 0.95, changefreq: "monthly" },
-  { path: "/asylum-profiles", priority: 0.93, changefreq: "monthly" },
-  { path: "/cpin-country-guidance", priority: 0.9, changefreq: "monthly" },
-  { path: "/services", priority: 0.9, changefreq: "monthly" },
-  { path: "/what-is-a-south-asia-expert-witness", priority: 0.9, changefreq: "monthly" },
-  { path: "/case-types", priority: 0.88, changefreq: "monthly" },
-  { path: "/how-to-instruct", priority: 0.88, changefreq: "monthly" },
-  { path: "/qualifications", priority: 0.88, changefreq: "monthly" },
-  { path: "/guides", priority: 0.87, changefreq: "monthly" },
-  { path: "/glossary", priority: 0.75, changefreq: "monthly" },
+  { path: "/faq", priority: 0.9, changefreq: "monthly" },
   { path: "/cookie-policy", priority: 0.5, changefreq: "yearly" },
 ];
 
 export const NON_INDEXABLE_PATHS = ["/contact", "/thank-you", "/privacy", "/terms"] as const;
 
 export const ROBOTS_DISALLOW_PATHS = ["/thank-you", "/api/"] as const;
-
-const COUNTRY_PRIORITIES: Record<string, number> = {
-  bangladesh: 0.94,
-  india: 0.94,
-  "sri-lanka": 0.93,
-  nepal: 0.92,
-  bhutan: 0.9,
-};
-
-function dynamicEntries(): PublicUrlEntry[] {
-  return [
-    ...asylumProfiles.map((p) => ({
-      path: `/asylum-profiles/${p.slug}`,
-      priority: 0.92,
-      changefreq: "monthly" as const,
-    })),
-    ...countries.map((c) => ({
-      path: `/countries/${c.slug}`,
-      priority: COUNTRY_PRIORITIES[c.slug] ?? 0.9,
-      changefreq: "monthly" as const,
-    })),
-    ...caseTypes.map((c) => ({
-      path: `/case-types/${c.slug}`,
-      priority: 0.88,
-      changefreq: "monthly" as const,
-    })),
-    ...guides.map((g) => ({
-      path: `/guides/${g.slug}`,
-      priority: 0.82,
-      changefreq: "monthly" as const,
-    })),
-  ];
-}
 
 export type PublicUrlInventory = {
   siteUrl: string;
@@ -72,10 +26,8 @@ export type PublicUrlInventory = {
 
 export function buildPublicUrlInventory(siteUrl: string = SITE_URL): PublicUrlInventory {
   const origin = siteUrl.replace(/\/$/, "");
-  const merged = [...APP_STATIC_PATHS, ...dynamicEntries()];
-
   const byPath = new Map<string, PublicUrlEntry>();
-  for (const entry of merged) {
+  for (const entry of APP_STATIC_PATHS) {
     const path = entry.path.startsWith("/") ? entry.path : `/${entry.path}`;
     if (NON_INDEXABLE_PATHS.includes(path as (typeof NON_INDEXABLE_PATHS)[number])) continue;
     byPath.set(path, { ...entry, path });

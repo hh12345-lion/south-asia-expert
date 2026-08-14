@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Onest, Unbounded } from "next/font/google";
+import { Bricolage_Grotesque, Karla } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieConsentProvider } from "@/components/cookies";
@@ -7,17 +7,16 @@ import { ConsentDefaultsScript } from "@/components/cookies/ConsentDefaultsScrip
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
-const onest = Onest({
+const karla = Karla({
   subsets: ["latin"],
-  variable: "--font-onest",
+  variable: "--font-karla",
   display: "swap",
 });
 
-const unbounded = Unbounded({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-unbounded",
+  variable: "--font-bricolage",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
 });
 
 export const viewport = {
@@ -52,7 +51,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-GB" className={`${onest.variable} ${unbounded.variable} h-full`}>
+    <html lang="en-GB" className={`${karla.variable} ${bricolage.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
         <ConsentDefaultsScript />
         <CookieConsentProvider>

@@ -56,7 +56,7 @@ export const faqs: FAQ[] = [
   {
     question: "How do I instruct a South Asia expert witness?",
     answer:
-      "Contact us via the instruction form or email. For Legal Aid cases, obtain LAA prior authority before instruction. Provide the AIR, RFRL, witness statement, relevant CPINs, and a detailed letter of instruction. Allow 2 to 4 weeks for a standard report.",
+      "Send a brief via the form or email. For Legal Aid cases, obtain LAA prior authority first. Provide the AIR, RFRL, witness statement, relevant CPINs, and a detailed letter of instruction. Allow 2 to 4 weeks for a standard report.",
   },
   {
     question: "Are South Asia expert reports Legal Aid compatible?",

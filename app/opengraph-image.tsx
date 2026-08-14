@@ -14,37 +14,35 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-end",
-          backgroundColor: "#0E2433",
+          backgroundColor: "#F7F5F0",
           padding: 64,
-          backgroundImage:
-            "linear-gradient(135deg, #0E2433 0%, #0E2433 55%, #1F6B5C 100%)",
         }}
       >
         <div
           style={{
             width: 64,
             height: 4,
-            backgroundColor: "#C43B2C",
+            backgroundColor: "#7C6C4F",
             marginBottom: 28,
           }}
         />
         <div
           style={{
-            fontSize: 56,
+            fontSize: 52,
             fontWeight: 700,
-            color: "#FFFFFF",
+            color: "#1C2541",
             letterSpacing: "-0.03em",
             lineHeight: 1.1,
           }}
         >
-          SouthAsiaExpert
+          South Asia Expert Witness
         </div>
         <p
           style={{
             marginTop: 20,
-            fontSize: 28,
+            fontSize: 26,
             fontWeight: 500,
-            color: "#DCE5EA",
+            color: "#3A4250",
             lineHeight: 1.35,
             maxWidth: 800,
           }}
