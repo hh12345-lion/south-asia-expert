@@ -1,3 +1,12 @@
+function getSiteDomain(): string {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL || "https://southasiaexpert.com";
+  try {
+    return new URL(raw).hostname.replace(/^www\./, "");
+  } catch {
+    return "southasiaexpert.com";
+  }
+}
+
 export const LEAD_BRAND_NAME = "South Asia Expert";
 
 /** Row 1 headers in Google Sheet tab (GOOGLE_SHEET_TAB_NAME) — order must match buildLeadSheetRow() */
@@ -68,6 +77,7 @@ export function buildLeadWebhookPayload(input: SubmitLeadInput) {
     Email: input.email.trim(),
     "Phone Number": input.phone.trim(),
     "Brand name": LEAD_BRAND_NAME,
+    domain: getSiteDomain(),
   };
 }
 

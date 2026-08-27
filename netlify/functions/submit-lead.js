@@ -21,6 +21,15 @@ const { google } = require("googleapis");
 
 const BRAND_NAME = "South Asia Expert";
 
+
+function getSiteDomain() {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL || "https://southasiaexpert.com";
+  try {
+    return new URL(raw).hostname.replace(/^www\./, "");
+  } catch {
+    return "southasiaexpert.com";
+  }
+}
 function jsonResponse(statusCode, data) {
   return {
     statusCode,
@@ -166,6 +175,7 @@ exports.handler = async (event) => {
         Email: mail,
         "Phone Number": tel,
         "Brand name": BRAND_NAME,
+    domain: getSiteDomain(),
       };
 
       const ac = new AbortController();
