@@ -11,11 +11,13 @@ export const APP_STATIC_PATHS: PublicUrlEntry[] = [
   { path: "/", priority: 1.0, changefreq: "weekly" },
   { path: "/faq", priority: 0.9, changefreq: "monthly" },
   { path: "/cookie-policy", priority: 0.5, changefreq: "yearly" },
+  { path: "/privacy", priority: 0.3, changefreq: "yearly" },
+  { path: "/terms", priority: 0.3, changefreq: "yearly" },
 ];
 
-export const NON_INDEXABLE_PATHS = ["/contact", "/thank-you", "/privacy", "/terms"] as const;
+export const NON_INDEXABLE_PATHS = ["/contact", "/thank-you"] as const;
 
-export const ROBOTS_DISALLOW_PATHS = ["/thank-you", "/api/"] as const;
+export const ROBOTS_DISALLOW_PATHS = ["/thank-you", "/contact", "/api/"] as const;
 
 export type PublicUrlInventory = {
   siteUrl: string;

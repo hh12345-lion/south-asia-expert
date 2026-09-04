@@ -4,9 +4,9 @@ import { SITE_EMAIL } from "@/lib/constants";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Brief a South Asia Expert Witness | SouthAsiaExpert UK",
+  title: "Brief an expert",
   description:
-    "Send a short brief to match a qualified South Asia expert witness. Legal Aid compatible. Response within 1 business day.",
+    "Send a short brief to match a qualified South Asia expert witness. Legal Aid compatible. Response within one business day.",
   path: "/contact",
   noindex: true,
 });

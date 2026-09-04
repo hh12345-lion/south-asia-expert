@@ -13,6 +13,25 @@
   status = 200
   force = true
 
+# Single-hop canonical host: apex HTTPS (fixes www redirect chain + Ahrefs canonical issues)
+[[redirects]]
+  from = "https://www.southasiaexpert.com/*"
+  to = "https://southasiaexpert.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.southasiaexpert.com/*"
+  to = "https://southasiaexpert.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://southasiaexpert.com/*"
+  to = "https://southasiaexpert.com/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
@@ -22,3 +41,13 @@
   for = "/robots.txt"
   [headers.values]
     Content-Type = "text/plain"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

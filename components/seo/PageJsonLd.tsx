@@ -18,7 +18,7 @@ export function PageJsonLd({
   faqs?: FAQ[];
   extra?: object | object[];
 }) {
-  const schemas: object[] = [organizationSchema()];
+  const schemas: object[] = [{ "@context": "https://schema.org", ...organizationSchema() }];
   if (breadcrumbs && breadcrumbs.length > 0) {
     schemas.push(breadcrumbSchema(breadcrumbs));
   }

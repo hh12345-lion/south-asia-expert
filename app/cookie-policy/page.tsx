@@ -6,7 +6,7 @@ import { CATEGORY_META } from "@/lib/cookies/constants";
 import { SITE_EMAIL } from "@/lib/constants";
 
 export const metadata = createMetadata({
-  title: "Cookie Policy | SouthAsiaExpert",
+  title: "Cookie Policy",
   description:
     "How SouthAsiaExpert.com uses cookies and similar technologies, your choices under UK GDPR and ePrivacy, and how to manage preferences.",
   path: "/cookie-policy",

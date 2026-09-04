@@ -3,8 +3,8 @@ import { BRIEF_CTA_HOW, FAQ_HREF } from "@/lib/constants";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Thank You | SouthAsiaExpert",
-  description: "Your brief has been received.",
+  title: "Thank you",
+  description: "Your expert witness brief has been received. We will respond within one business day.",
   path: "/thank-you",
   noindex: true,
   follow: false,
@@ -28,10 +28,10 @@ export default function ThankYouPage() {
               Return to homepage
             </Link>
             <Link
-              href="/services"
+              href={FAQ_HREF}
               className="inline-flex min-h-[44px] min-w-[200px] items-center justify-center border border-[#1C2541] px-8 py-3 font-semibold text-[#1C2541] transition hover:bg-[#1C2541] hover:text-white"
             >
-              View services
+              {BRIEF_CTA_HOW}
             </Link>
           </div>
         </div>

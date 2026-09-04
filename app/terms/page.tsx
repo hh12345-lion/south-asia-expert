@@ -2,11 +2,10 @@ import { PageShell } from "@/components/layout/PageShell";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Terms of Use | SouthAsiaExpert",
-  description: "Terms of use for SouthAsiaExpert.com",
+  title: "Terms of Use",
+  description:
+    "Terms of use for SouthAsiaExpert.com: expert witness matching for UK solicitors, impartiality, limitations of service, and acceptable use of this website.",
   path: "/terms",
-  noindex: true,
-  follow: true,
 });
 
 export default function TermsPage() {

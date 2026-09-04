@@ -3,11 +3,10 @@ import { createMetadata } from "@/lib/metadata";
 import { SITE_EMAIL } from "@/lib/constants";
 
 export const metadata = createMetadata({
-  title: "Privacy Policy | SouthAsiaExpert",
-  description: "Privacy policy for SouthAsiaExpert.com",
+  title: "Privacy Policy",
+  description:
+    "How SouthAsiaExpert.com collects, uses, and protects personal data from contact form submissions, cookie preferences, and your rights under UK GDPR.",
   path: "/privacy",
-  noindex: true,
-  follow: true,
 });
 
 export default function PrivacyPage() {

@@ -1,5 +1,6 @@
+/** Apex domain — Netlify serves https://southasiaexpert.com (www redirects here). */
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.southasiaexpert.com";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://southasiaexpert.com";
 export const SITE_NAME = "SouthAsiaExpert";
 export const SITE_EMAIL = "cases@southasiaexpert.com";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/SouthAsiaExpertWitness";

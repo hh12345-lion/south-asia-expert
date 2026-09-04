@@ -11,10 +11,11 @@ import { BRIEF_CTA, BRIEF_CTA_HOW, FAQ_HREF, FORM_HREF } from "@/lib/constants";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "South Asia Expert Witness UK | Bangladesh, India, Sri Lanka & Nepal Asylum Reports",
+  title: "South Asia Expert Witness UK | Asylum Tribunal Reports",
   description:
-    "Find qualified South Asian country expert witnesses in the UK: Bangladesh, India, Sri Lanka, Nepal, and Bhutan. Country condition reports for asylum appeals and immigration tribunals. Legal Aid compatible.",
+    "UK South Asia expert witnesses for Bangladesh, India, Sri Lanka, Nepal and Bhutan. Country condition reports for asylum appeals and tribunals. Legal Aid compatible.",
   path: "/",
+  absoluteTitle: true,
 });
 
 const featuredProfileSlugs = [

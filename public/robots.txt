@@ -2,6 +2,7 @@
 User-agent: *
 Allow: /
 Disallow: /thank-you
+Disallow: /contact
 Disallow: /api/
 
-Sitemap: https://www.southasiaexpert.com/sitemap.xml
+Sitemap: https://southasiaexpert.com/sitemap.xml

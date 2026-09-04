@@ -5,7 +5,7 @@ import { faqs } from "@/data/faq";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "FAQ | South Asia Expert Witness UK",
+  title: "Expert witness FAQ",
   description:
     "Answers on South Asia expert witnesses for UK asylum tribunals: countries covered, Bangladesh 2024, KK [2021], Legal Aid, and report timelines.",
   path: "/faq",

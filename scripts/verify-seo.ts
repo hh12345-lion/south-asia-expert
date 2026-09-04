@@ -67,7 +67,7 @@ function main() {
     failed = true;
     console.error(`robots.txt missing correct Sitemap line for ${inventory.siteUrl}`);
   }
-  for (const path of ["/thank-you", "/api/"]) {
+  for (const path of ["/thank-you", "/contact", "/api/"]) {
     if (!robots.includes(`Disallow: ${path}`)) {
       failed = true;
       console.error(`robots.txt missing Disallow: ${path}`);

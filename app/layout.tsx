@@ -28,12 +28,11 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      "South Asia Expert Witness UK | Bangladesh, India, Sri Lanka & Nepal Asylum Reports",
+    default: "South Asia Expert Witness UK | Asylum Tribunal Reports",
     template: "%s | SouthAsiaExpert",
   },
   description:
-    "Find qualified South Asian country expert witnesses in the UK: Bangladesh, India, Sri Lanka, Nepal, and Bhutan. Country condition reports for asylum appeals and immigration tribunals. Legal Aid compatible.",
+    "UK South Asia expert witnesses for Bangladesh, India, Sri Lanka, Nepal and Bhutan. Country condition reports for asylum appeals and tribunals. Legal Aid compatible.",
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
     other: process.env.BING_SITE_VERIFICATION

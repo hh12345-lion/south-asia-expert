@@ -16,20 +16,24 @@ export function createMetadata({
   path = "",
   noindex = false,
   follow = true,
+  absoluteTitle = false,
 }: {
   title: string;
   description: string;
   path?: string;
   noindex?: boolean;
   follow?: boolean;
+  /** Bypass layout title template (use for homepage or fully custom titles). */
+  absoluteTitle?: boolean;
 }): Metadata {
   const url = `${SITE_URL}${path}`;
+  const resolvedTitle = absoluteTitle ? { absolute: title } : title;
   return {
-    title,
+    title: resolvedTitle,
     description,
     alternates: { canonical: url },
     openGraph: {
-      title,
+      title: typeof resolvedTitle === "string" ? resolvedTitle : title,
       description,
       url,
       siteName: "SouthAsiaExpert",
@@ -37,7 +41,11 @@ export function createMetadata({
       type: "website",
       images: [OPEN_GRAPH_IMAGE],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: {
+      card: "summary_large_image",
+      title: typeof resolvedTitle === "string" ? resolvedTitle : title,
+      description,
+    },
     robots: noindex
       ? { index: false, follow, googleBot: { index: false, follow } }
       : { index: true, follow: true },
