@@ -57,6 +57,7 @@ export type SubmitLeadInput = {
   fullName: string;
   email: string;
   phone: string;
+  message?: string;
 };
 
 export type SubmitLeadPayload = SubmitLeadInput & {
@@ -78,6 +79,7 @@ export function buildLeadWebhookPayload(input: SubmitLeadInput) {
     "Phone Number": input.phone.trim(),
     "Brand name": LEAD_BRAND_NAME,
     domain: getSiteDomain(),
+    message: input.message ?? "",
   };
 }
 
@@ -107,6 +109,7 @@ export async function postSubmitLead(payload: SubmitLeadPayload): Promise<boolea
         deadline: payload.deadline,
         urgency: payload.urgency,
         summary: payload.summary,
+        message: payload.message ?? payload.summary ?? "",
       }),
     });
     return res.ok;

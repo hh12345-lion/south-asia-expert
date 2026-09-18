@@ -20,6 +20,7 @@ export function ContactForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
+    const summary = String(data.get("summary") ?? "").trim();
     const payload = {
       fullName: String(data.get("name") ?? "").trim(),
       organisation: String(data.get("law_firm") ?? "").trim(),
@@ -31,7 +32,8 @@ export function ContactForm() {
       funding: "",
       deadline: "",
       urgency: "",
-      summary: String(data.get("summary") ?? "").trim(),
+      summary,
+      message: summary,
     };
 
     const ok = await postSubmitLead(payload);
