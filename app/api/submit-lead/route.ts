@@ -41,6 +41,17 @@ export async function POST(request: Request) {
   const phone = sanitize(body.phone ?? "");
   const organisation = sanitize(body.organisation ?? "");
   const summary = sanitize(body.summary ?? "");
+  const message = sanitize(
+    body.message ??
+      (body as { Message?: string }).Message ??
+      body.summary ??
+      (body as { description?: string }).description ??
+      (body as { enquiry?: string }).enquiry ??
+      (body as { details?: string }).details ??
+      (body as { notes?: string }).notes ??
+      (body as { matter?: string }).matter ??
+      ""
+  );
 
   if (!fullName || !email) {
     return NextResponse.json({ error: "fullName and email are required" }, { status: 400 });
@@ -72,7 +83,7 @@ export async function POST(request: Request) {
   }
 
   if (webhookUrl) {
-    const outbound = buildLeadWebhookPayload({ fullName, email, phone });
+    const outbound = buildLeadWebhookPayload({ fullName, email, phone, message });
     try {
       const res = await fetch(webhookUrl, {
         method: "POST",
