@@ -1,4 +1,5 @@
 import { SITE_URL } from "../constants";
+import { getAllBlogPosts } from "../blog";
 
 export type PublicUrlEntry = {
   path: string;
@@ -10,6 +11,7 @@ export type PublicUrlEntry = {
 export const APP_STATIC_PATHS: PublicUrlEntry[] = [
   { path: "/", priority: 1.0, changefreq: "weekly" },
   { path: "/faq", priority: 0.9, changefreq: "monthly" },
+  { path: "/blog", priority: 0.88, changefreq: "weekly" },
   { path: "/cookie-policy", priority: 0.5, changefreq: "yearly" },
   { path: "/privacy", priority: 0.3, changefreq: "yearly" },
   { path: "/terms", priority: 0.3, changefreq: "yearly" },
@@ -33,6 +35,13 @@ export function buildPublicUrlInventory(siteUrl: string = SITE_URL): PublicUrlIn
     const path = entry.path.startsWith("/") ? entry.path : `/${entry.path}`;
     if (NON_INDEXABLE_PATHS.includes(path as (typeof NON_INDEXABLE_PATHS)[number])) continue;
     byPath.set(path, { ...entry, path });
+  }
+  for (const post of getAllBlogPosts()) {
+    byPath.set(`/blog/${post.slug}`, {
+      path: `/blog/${post.slug}`,
+      priority: 0.85,
+      changefreq: "monthly",
+    });
   }
 
   const entries = [...byPath.values()].sort((a, b) => a.path.localeCompare(b.path));

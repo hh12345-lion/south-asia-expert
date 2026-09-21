@@ -18,6 +18,9 @@ export function Footer() {
             {SITE_EMAIL}
           </a>
           <nav className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-[#5A6472]" aria-label="Footer">
+            <Link href="/blog" className="inline-flex min-h-[44px] items-center hover:text-[#1C2541]">
+              Blog
+            </Link>
             <Link href={FAQ_HREF} className="inline-flex min-h-[44px] items-center hover:text-[#1C2541]">
               FAQ
             </Link>

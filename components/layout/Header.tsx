@@ -6,6 +6,7 @@ import { BRIEF_CTA, FAQ_HREF, FORM_HREF } from "@/lib/constants";
 
 const navLinks = [
   { label: "Home", href: "/" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: FAQ_HREF },
 ];
 
