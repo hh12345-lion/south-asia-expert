@@ -1,7 +1,7 @@
 /** Apex domain — Netlify serves https://southasiaexpert.com (www redirects here). */
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://southasiaexpert.com";
-export const SITE_NAME = "SouthAsiaExpert";
+export const SITE_NAME = "South Asia Expert";
 export const SITE_EMAIL = "cases@southasiaexpert.com";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/SouthAsiaExpertWitness";
 
@@ -14,19 +14,20 @@ export const FORM_HREF = "/contact";
 /** Single Google Sheet tab for every form submission — no Contact/Instruct split. */
 export const SHEET_TAB_NAME = "Southasia Expert";
 
-/** Stone-and-bronze tokens — unused by the five comparison sites */
+/** Brand palette from guidelines */
 export const COLORS = {
-  primary: "#1C2541",
-  accent: "#7C6C4F",
-  highlight: "#3D5A80",
-  background: "#F7F5F0",
-  sectionAlt: "#EBE6DC",
-  border: "#D8D4CC",
-  heading: "#1C2541",
+  primary: "#1A2138",
+  accent: "#716148",
+  highlight: "#1A2138",
+  background: "#F6F4EE",
+  sectionAlt: "#E8E2D8",
+  border: "#D4CDC2",
+  heading: "#1A2138",
   body: "#3A4250",
-  paper: "#F7F5F0",
-  ink: "#1C2541",
-  bronze: "#7C6C4F",
-  steel: "#3D5A80",
+  paper: "#F6F4EE",
+  ink: "#1A2138",
+  bronze: "#716148",
+  steel: "#1A2138",
   muted: "#5A6472",
+  white: "#FFFFFF",
 } as const;

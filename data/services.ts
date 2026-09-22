@@ -11,7 +11,7 @@ export const services: Service[] = [
     title: "Bangladesh Country Condition Reports",
     navLabel: "Bangladesh Reports",
     description:
-      "Post-August 2024 political transition analysis, BNP/Awami League persecution, Hindu minority, LGBTQ+ criminalisation, and journalist persecution reports for UK tribunals.",
+      "Post-August 2024 political transition analysis, BNP/Awami League persecution, Hindu minority, LGBTQ+ criminalisation, and journalist persecution reports for tribunals.",
   },
   {
     id: "india-reports",
@@ -32,21 +32,21 @@ export const services: Service[] = [
     title: "Nepal/Bhutan Country Reports",
     navLabel: "Nepal/Bhutan Reports",
     description:
-      "Maoist-linked claims, Dalit caste discrimination, Madhesi and Janajati ethnic minorities, Lhotshampa persecution, and political dissident reports where no UK country guidance exists.",
+      "Maoist-linked claims, Dalit caste discrimination, Madhesi and Janajati ethnic minorities, Lhotshampa persecution, and political dissident reports where no country guidance exists.",
   },
   {
     id: "cpin-challenge",
     title: "CPIN Challenge Reports",
     navLabel: "CPIN Challenge Reports",
     description:
-      "Independent analysis challenging Home Office CPIN positions on South Asian countries, addressing gaps in coverage and profile-specific risk factors.",
+      "Independent analysis challenging decision-makers CPIN positions on South Asian countries, addressing gaps in coverage and profile-specific risk factors.",
   },
   {
     id: "internal-relocation",
     title: "Internal Relocation Analysis",
     navLabel: "Internal Relocation",
     description:
-      "Assessment of internal relocation viability within India and other South Asian countries, challenging Home Office arguments where persecutors have national reach.",
+      "Assessment of internal relocation viability within India and other South Asian countries, challenging decision-makers arguments where persecutors have national reach.",
   },
   {
     id: "bangladesh-post-2024",

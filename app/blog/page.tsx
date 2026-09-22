@@ -7,9 +7,9 @@ import { getAllBlogPosts } from "@/lib/blog";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 
 export const metadata = createMetadata({
-  title: "Blog | SouthAsiaExpert",
+  title: "Blog | South Asia Expert",
   description:
-    "Articles for UK immigration solicitors on South Asia country expert evidence, source assessment, and instructing country experts.",
+    "Articles for immigration solicitors on South Asia country expert evidence, source assessment, and instructing country experts.",
   path: "/blog",
 });
 
@@ -37,7 +37,7 @@ export default function BlogIndexPage() {
     <>
       <PageJsonLd breadcrumbs={crumbs} extra={blogLd} />
       <PageShell
-        title="SouthAsiaExpert Blog"
+        title="South Asia Expert Blog"
         subtitle="Practitioner articles on country expert evidence, source assessment, and instructing South Asia country experts."
         breadcrumbs={crumbs}
       >
@@ -48,7 +48,7 @@ export default function BlogIndexPage() {
             {posts.map((post) => (
               <li
                 key={post.slug}
-                className="overflow-hidden border border-[#D8D4CC] bg-[#F7F5F0]"
+                className="overflow-hidden border border-[#D4CDC2] bg-[#F6F4EE]"
               >
                 {post.image ? (
                   <Link href={`/blog/${post.slug}`} className="relative block h-56 w-full">
@@ -62,9 +62,9 @@ export default function BlogIndexPage() {
                   </Link>
                 ) : null}
                 <div className="p-6">
-                  <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-[#3D5A80]">
+                  <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-[#1A2138]">
                     <time dateTime={post.updated || post.date}>
-                      {new Date(post.updated || post.date).toLocaleDateString("en-GB", {
+                      {new Date(post.updated || post.date).toLocaleDateString("en", {
                         day: "numeric",
                         month: "long",
                         year: "numeric",
@@ -75,8 +75,8 @@ export default function BlogIndexPage() {
                       {post.readingTime}
                     </span>
                   </p>
-                  <h2 className="mt-3 font-display text-2xl text-[#1C2541]">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-[#3D5A80]">
+                  <h2 className="mt-3 font-display text-2xl text-[#1A2138]">
+                    <Link href={`/blog/${post.slug}`} className="hover:text-[#1A2138]">
                       {post.title}
                     </Link>
                   </h2>
@@ -84,7 +84,7 @@ export default function BlogIndexPage() {
                   <p className="mt-5">
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-[15px] font-medium text-[#7C6C4F] hover:underline"
+                      className="text-[15px] font-medium text-[#716148] hover:underline"
                     >
                       Read article
                     </Link>

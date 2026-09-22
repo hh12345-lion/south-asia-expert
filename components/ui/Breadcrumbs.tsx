@@ -16,12 +16,12 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
             {item.href ? (
               <Link
                 href={item.href}
-                className="inline-flex min-h-[44px] max-w-full items-center break-words py-1 hover:text-[#1C2541]"
+                className="inline-flex min-h-[44px] max-w-full items-center break-words py-1 hover:text-[#1A2138]"
               >
                 {item.label}
               </Link>
             ) : (
-              <span className="break-words text-[#1C2541]">{item.label}</span>
+              <span className="break-words text-[#1A2138]">{item.label}</span>
             )}
           </li>
         ))}

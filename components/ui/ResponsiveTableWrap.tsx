@@ -11,7 +11,7 @@ export function ResponsiveTableWrap({
   return (
     <div className="table-scroll">
       <p className="mb-2 text-xs text-[#3A4250] sm:sr-only">{label}</p>
-      <div className="overflow-x-auto rounded-none border border-[#D8D4CC]">{children}</div>
+      <div className="overflow-x-auto rounded-none border border-[#D4CDC2]">{children}</div>
     </div>
   );
 }

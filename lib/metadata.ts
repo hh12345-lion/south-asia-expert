@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "./constants";
 
-const OG_IMAGE_ALT = "SouthAsiaExpert - South Asia Expert Witness Services UK";
+const OG_IMAGE_ALT = "South Asia Expert";
 
 export const OPEN_GRAPH_IMAGE = {
-  url: `${SITE_URL}/opengraph-image`,
+  url: `${SITE_URL}/og-default.jpg`,
   width: 1200,
   height: 630,
   alt: OG_IMAGE_ALT,
@@ -36,8 +36,8 @@ export function createMetadata({
       title: typeof resolvedTitle === "string" ? resolvedTitle : title,
       description,
       url,
-      siteName: "SouthAsiaExpert",
-      locale: "en_GB",
+      siteName: "South Asia Expert",
+      locale: "en",
       type: "website",
       images: [OPEN_GRAPH_IMAGE],
     },
@@ -45,6 +45,7 @@ export function createMetadata({
       card: "summary_large_image",
       title: typeof resolvedTitle === "string" ? resolvedTitle : title,
       description,
+      images: [OPEN_GRAPH_IMAGE.url],
     },
     robots: noindex
       ? { index: false, follow, googleBot: { index: false, follow } }

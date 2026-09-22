@@ -52,23 +52,23 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
         <ResponsiveTableWrap label="Swipe to view country statistics">
           <table className="w-full min-w-[320px] border-collapse text-sm">
             <tbody>
-              <tr className="border-b border-[#D8D4CC]">
-                <td className="px-3 py-3 font-semibold text-[#1C2541] sm:px-4">UK Asylum Claim Volume</td>
+              <tr className="border-b border-[#D4CDC2]">
+                <td className="px-3 py-3 font-semibold text-[#1A2138] sm:px-4">UK Asylum Claim Volume</td>
                 <td className="px-3 py-3 text-[#3A4250] sm:px-4">{country.claimVolume}</td>
               </tr>
-              <tr className="border-b border-[#D8D4CC]">
-                <td className="px-3 py-3 font-semibold text-[#1C2541] sm:px-4">Key Profiles</td>
+              <tr className="border-b border-[#D4CDC2]">
+                <td className="px-3 py-3 font-semibold text-[#1A2138] sm:px-4">Key Profiles</td>
                 <td className="px-3 py-3 text-[#3A4250] sm:px-4">{country.keyProfiles}</td>
               </tr>
-              <tr className="border-b border-[#D8D4CC]">
-                <td className="px-3 py-3 font-semibold text-[#1C2541] sm:px-4">UK Country Guidance</td>
+              <tr className="border-b border-[#D4CDC2]">
+                <td className="px-3 py-3 font-semibold text-[#1A2138] sm:px-4">UK Country Guidance</td>
                 <td className="px-3 py-3 text-[#3A4250] sm:px-4">{country.countryGuidance}</td>
               </tr>
             </tbody>
           </table>
         </ResponsiveTableWrap>
 
-        <h2 className="mt-8 text-lg font-bold text-[#1C2541] sm:text-xl">Related Asylum Profiles</h2>
+        <h2 className="mt-8 text-lg font-bold text-[#1A2138] sm:text-xl">Related Asylum Profiles</h2>
         <ul className="mt-4 space-y-2">
           {country.relatedProfiles.map((s) => {
             const profile = getAsylumProfile(s);
@@ -76,7 +76,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
               <li key={s}>
                 <Link
                   href={`/asylum-profiles/${s}`}
-                  className="inline-flex min-h-[44px] items-center text-[#7C6C4F] hover:underline"
+                  className="inline-flex min-h-[44px] items-center text-[#716148] hover:underline"
                 >
                   {profile?.title ?? s}
                 </Link>

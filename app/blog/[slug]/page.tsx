@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     <>
       <PageJsonLd breadcrumbs={crumbs} extra={articleLd} />
       {post.image ? (
-        <div className="relative mx-auto h-[min(26rem,50vw)] w-full max-w-5xl border-b border-[#D8D4CC]">
+        <div className="relative mx-auto h-[min(26rem,50vw)] w-full max-w-5xl border-b border-[#D4CDC2]">
           <Image
             src={post.image}
             alt={post.imageAlt || post.title}
@@ -96,13 +96,13 @@ export default async function BlogPostPage({ params }: PageProps) {
       ) : null}
 
       <article className="mx-auto max-w-[52rem] px-4 py-10 sm:px-6 sm:py-12 lg:px-10">
-        <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-[#3D5A80]">
+        <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-[#1A2138]">
           <Link href="/blog" className="hover:underline">
             Blog
           </Link>
           <span className="mx-2 text-[#5A6472]">/</span>
           <time dateTime={post.updated || post.date}>
-            {new Date(post.updated || post.date).toLocaleDateString("en-GB", {
+            {new Date(post.updated || post.date).toLocaleDateString("en", {
               day: "numeric",
               month: "long",
               year: "numeric",
@@ -111,19 +111,19 @@ export default async function BlogPostPage({ params }: PageProps) {
           <span className="mx-2 text-[#5A6472]">·</span>
           <span className="normal-case tracking-normal text-[#5A6472]">{post.readingTime}</span>
         </p>
-        <h1 className="mt-4 font-display text-3xl leading-tight text-[#1C2541] sm:text-4xl">
+        <h1 className="mt-4 font-display text-3xl leading-tight text-[#1A2138] sm:text-4xl">
           {post.title}
         </h1>
         <p className="mt-4 text-lg text-[#3A4250]">{post.description}</p>
 
         <div className="blog-prose mt-10" dangerouslySetInnerHTML={{ __html: html }} />
 
-        <p className="mt-12 border-t border-[#D8D4CC] pt-8 text-[15px]">
-          <Link href="/blog" className="font-medium text-[#7C6C4F] hover:underline">
+        <p className="mt-12 border-t border-[#D4CDC2] pt-8 text-[15px]">
+          <Link href="/blog" className="font-medium text-[#716148] hover:underline">
             ← Back to the blog
           </Link>
           <span className="mx-3 text-[#5A6472]">·</span>
-          <Link href={FORM_HREF} className="font-medium text-[#7C6C4F] hover:underline">
+          <Link href={FORM_HREF} className="font-medium text-[#716148] hover:underline">
             {BRIEF_CTA}
           </Link>
         </p>

@@ -4,7 +4,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "Terms of Use",
   description:
-    "Terms of use for SouthAsiaExpert.com: expert witness matching for UK solicitors, impartiality, limitations of service, and acceptable use of this website.",
+    "Terms of use for South Asia Expert.com: expert witness matching for counsel, impartiality, limitations of service, and acceptable use of this website.",
   path: "/terms",
 });
 
@@ -12,12 +12,12 @@ export default function TermsPage() {
   return (
     <PageShell title="Terms of Use" breadcrumbs={[{ label: "Home", href: "/" }, { label: "Terms" }]}>
       <p className="text-[#3A4250] leading-relaxed">
-        SouthAsiaExpert.com is an expert witness matching service for UK immigration solicitors. We are not a law firm
+        South Asia Expert.com is an expert witness matching service for immigration solicitors. We are not a law firm
         and do not provide legal advice. Expert witnesses instructed through this service provide independent evidence
         to tribunals; their duty is to the tribunal, not to either party.
       </p>
       <p className="mt-4 text-[#3A4250] leading-relaxed">
-        SouthAsiaExpert is politically neutral. We are not a diaspora organisation, lobby group, or campaign for any
+        South Asia Expert is politically neutral. We are not a diaspora organisation, lobby group, or campaign for any
         South Asian government, opposition movement, or regional interest. Information on this site covers multiple
         countries and opposing claim profiles so that solicitors can instruct experts for any meritorious case. Nothing
         on the site should be read as endorsement of any political, religious, or ethnic position.

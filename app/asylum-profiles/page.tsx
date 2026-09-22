@@ -20,7 +20,7 @@ export default function AsylumProfilesPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="South Asian Asylum Profiles"
-        subtitle="Dedicated expert witness evidence for each major South Asian asylum profile in UK immigration tribunals."
+        subtitle="Dedicated expert witness evidence for each major South Asian asylum profile in immigration tribunals."
         breadcrumbs={crumbs}
       >
         <p className="mb-8 text-[#3A4250] leading-relaxed">
@@ -37,7 +37,7 @@ export default function AsylumProfilesPage() {
         />
         <p className="mt-8 text-[#3A4250]">
           For a complete overview, see our{" "}
-          <Link href="/south-asia-asylum-explained" className="font-semibold text-[#7C6C4F] hover:underline">
+          <Link href="/south-asia-asylum-explained" className="font-semibold text-[#716148] hover:underline">
             South Asia asylum explained pillar page
           </Link>
           .

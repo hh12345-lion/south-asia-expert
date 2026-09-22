@@ -20,7 +20,7 @@ export default function GuidesPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="Solicitor Guides: South Asia Expert Evidence"
-        subtitle="Practical guides for UK immigration solicitors instructing South Asia country expert witnesses."
+        subtitle="Practical guides for immigration solicitors instructing South Asia country expert witnesses."
         breadcrumbs={crumbs}
       >
         <p className="mb-8 text-[#3A4250] leading-relaxed">
@@ -37,7 +37,7 @@ export default function GuidesPage() {
         />
         <p className="mt-8 text-[#3A4250]">
           For a complete overview, see our{" "}
-          <Link href="/south-asia-asylum-explained" className="font-semibold text-[#7C6C4F] hover:underline">
+          <Link href="/south-asia-asylum-explained" className="font-semibold text-[#716148] hover:underline">
             South Asia asylum explained pillar page
           </Link>
           .

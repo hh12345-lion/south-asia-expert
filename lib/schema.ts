@@ -34,11 +34,10 @@ export function organizationSchema() {
   return {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
-    name: "SouthAsiaExpert",
+    name: "South Asia Expert",
     url: SITE_URL,
     email: SITE_EMAIL,
-    address: { "@type": "PostalAddress", addressCountry: "GB" },
-    areaServed: ["United Kingdom", "United States", "European Union"],
+    areaServed: "Worldwide",
     sameAs: [LINKEDIN_URL],
   };
 }
@@ -61,7 +60,7 @@ export function professionalServiceSchema() {
     url: SITE_URL,
     serviceType: "South Asia Expert Witness",
     provider: { "@id": `${SITE_URL}/#organization` },
-    areaServed: "United Kingdom",
+    areaServed: "Worldwide",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "South Asia Expert Witness Services",
@@ -85,9 +84,9 @@ export function websiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
-    name: "SouthAsiaExpert",
+    name: "South Asia Expert",
     url: SITE_URL,
-    inLanguage: "en-GB",
+    inLanguage: "en",
     publisher: { "@id": `${SITE_URL}/#organization` },
   };
 }
@@ -133,7 +132,7 @@ export function articleSchema({
     headline: title,
     description,
     url: `${SITE_URL}${path}`,
-    inLanguage: "en-GB",
+    inLanguage: "en",
     publisher: { "@id": `${SITE_URL}/#organization` },
   };
 }

@@ -48,7 +48,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <RelatedLinks links={getGuideRelatedLinks(slug)} />
         <Link
           href="/contact"
-          className="mt-8 inline-flex min-h-[44px] items-center rounded-none bg-[#7C6C4F] px-6 py-3 font-semibold text-white"
+          className="mt-8 inline-flex min-h-[44px] items-center rounded-none bg-[#716148] px-6 py-3 font-semibold text-white"
         >
           Brief an expert
         </Link>

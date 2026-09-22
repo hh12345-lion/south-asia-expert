@@ -7,8 +7,8 @@ import { postSubmitLead } from "@/lib/submit-lead";
 import { submitNetlifyForm } from "@/lib/submitNetlifyForm";
 
 const inputClass =
-  "w-full min-w-0 border border-[#D8D4CC] border-l-4 border-l-[#7C6C4F] bg-white px-3 py-3 text-base text-[#3A4250] placeholder:text-[#5A6472]/60 focus:border-[#1C2541] focus:border-l-[#7C6C4F] focus:outline-none min-h-[44px]";
-const labelClass = "mb-2 block text-sm font-semibold text-[#1C2541]";
+  "w-full min-w-0 border border-[#D4CDC2] border-l-4 border-l-[#716148] bg-white px-3 py-3 text-base text-[#3A4250] placeholder:text-[#5A6472]/60 focus:border-[#1A2138] focus:border-l-[#716148] focus:outline-none min-h-[44px]";
+const labelClass = "mb-2 block text-sm font-semibold text-[#1A2138]";
 
 export function ContactForm() {
   const router = useRouter();
@@ -23,7 +23,7 @@ export function ContactForm() {
     const summary = String(data.get("summary") ?? "").trim();
     const payload = {
       fullName: String(data.get("name") ?? "").trim(),
-      organisation: String(data.get("law_firm") ?? "").trim(),
+      organisation: "",
       email: String(data.get("email") ?? "").trim(),
       phone: "",
       caseProfile: "",
@@ -41,9 +41,9 @@ export function ContactForm() {
       try {
         await submitNetlifyForm("contact", {
           name: String(data.get("name") ?? "").trim(),
-          law_firm: String(data.get("law_firm") ?? "").trim(),
           email: String(data.get("email") ?? "").trim(),
-          summary: String(data.get("summary") ?? "").trim(),
+          summary,
+          message: summary,
         });
       } catch {
         // Sheets/webhook already stored the enquiry; don't block the visitor.
@@ -74,20 +74,6 @@ export function ContactForm() {
       </div>
 
       <div className="min-w-0">
-        <label className={labelClass} htmlFor="law_firm">
-          Law firm *
-        </label>
-        <input
-          id="law_firm"
-          name="law_firm"
-          required
-          autoComplete="organization"
-          className={inputClass}
-          placeholder="Firm name"
-        />
-      </div>
-
-      <div className="min-w-0">
         <label className={labelClass} htmlFor="email">
           Email *
         </label>
@@ -98,7 +84,7 @@ export function ContactForm() {
           required
           autoComplete="email"
           className={inputClass}
-          placeholder="you@firm.co.uk"
+          placeholder="you@firm.com"
         />
       </div>
 
@@ -129,7 +115,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#7C6C4F] px-8 py-3 text-base font-semibold text-white transition hover:bg-[#1C2541] disabled:opacity-60 sm:w-auto"
+        className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#716148] px-8 py-3 text-base font-semibold text-white transition hover:bg-[#1A2138] disabled:opacity-60 sm:w-auto"
       >
         {status === "loading" ? "Sending…" : "Submit brief"}
       </button>

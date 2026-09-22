@@ -3,7 +3,7 @@ import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "South Asia Expert Witness Qualifications UK | Credentials & Standards",
+  title: "South Asia Expert Witness Qualifications | Credentials & Standards",
   description:
     "What qualifications should a South Asia expert witness hold? Bengali, Hindi, Tamil, Nepali language expertise, field research, academic credentials, and tribunal acceptance.",
   path: "/qualifications",
@@ -16,7 +16,7 @@ export default function QualificationsPage() {
     <>
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell title="South Asia Expert Witness Qualifications UK" breadcrumbs={crumbs}>
-        <h2 className="text-xl font-bold text-[#1C2541]">What Makes a Qualified South Asia Expert</h2>
+        <h2 className="text-xl font-bold text-[#1A2138]">What Makes a Qualified South Asia Expert</h2>
         <p className="mt-4 text-[#3A4250] leading-relaxed">
           A qualified South Asia expert witness holds academic credentials (PhD, MA, or equivalent research background) in
           South Asian Studies, Political Science, Anthropology, International Relations, Religious Studies, or a related
@@ -29,7 +29,7 @@ export default function QualificationsPage() {
           cases demonstrates evidential reliability.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C2541]">Key Qualifications for South Asia Experts</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#1A2138]">Key Qualifications for South Asia Experts</h2>
         <ul className="mt-4 list-disc space-y-2 pl-6 text-[#3A4250]">
           <li>Language expertise: Bengali, Hindi, Tamil, Nepali, Sinhala, Dzongkha</li>
           <li>Field research experience in South Asian countries</li>
@@ -39,13 +39,13 @@ export default function QualificationsPage() {
           <li>EIN directory listing or equivalent professional recognition</li>
         </ul>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C2541]">
+        <h2 className="mt-10 text-xl font-bold text-[#1A2138]">
           Immigration Tribunal Practice Direction: Expert Duties
         </h2>
         <p className="mt-4 text-[#3A4250] leading-relaxed">
           An expert&apos;s paramount duty is to the tribunal: to assist it in reaching a decision by providing an
           objective, unbiased opinion on matters within their expertise, not to advocate for either the appellant or
-          the Home Office. Expert evidence should be the independent product of the expert, uninfluenced by the
+          the decision-makers. Expert evidence should be the independent product of the expert, uninfluenced by the
           pressures of litigation.
         </p>
         <p className="mt-4 text-[#3A4250] leading-relaxed">
@@ -54,15 +54,15 @@ export default function QualificationsPage() {
           legal conclusion on refugee status.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C2541]">Neutrality Across Countries and Profiles</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#1A2138]">Neutrality Across Countries and Profiles</h2>
         <p className="mt-4 text-[#3A4250] leading-relaxed">
           A qualified South Asia expert must be able to analyse conditions in any of the five covered countries without
           personal or political bias. Experts may be instructed by solicitors acting for appellants or respondents; in
-          either role, the analysis must remain neutral. SouthAsiaExpert selects experts on academic and field-research
+          either role, the analysis must remain neutral. South Asia Expert selects experts on academic and field-research
           credentials, not on alignment with any political faction, diaspora group, or regional interest.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C2541]">Red Flags</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#1A2138]">Red Flags</h2>
         <ul className="mt-4 list-disc space-y-2 pl-6 text-[#3A4250]">
           <li>Expert without current knowledge of the relevant South Asian country</li>
           <li>Reports that simply reproduce CPIN without independent analysis</li>

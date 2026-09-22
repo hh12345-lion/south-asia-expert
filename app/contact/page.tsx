@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "Brief an expert",
   description:
-    "Send a short brief to match a qualified South Asia expert witness. Legal Aid compatible. Response within one business day.",
+    "Send a short brief to match a qualified South Asia expert witness. funding-compatible. Response within one business day.",
   path: "/contact",
   noindex: true,
 });
@@ -23,10 +23,10 @@ export default function ContactPage() {
         <div className="min-w-0 max-w-xl">
           <ContactForm />
         </div>
-        <aside className="h-fit border-l-4 border-[#7C6C4F] pl-5 sm:pl-6">
+        <aside className="h-fit border-l-4 border-[#716148] pl-5 sm:pl-6">
           <p className="kicker">Before you write</p>
           <p className="mt-3 text-sm leading-relaxed text-[#3A4250]">
-            Impartial matching for UK solicitors — not advocacy, not a law firm. Experts cover Bangladesh, India, Sri
+            Impartial matching for counsel — not advocacy, not a law firm. Experts cover Bangladesh, India, Sri
             Lanka, Nepal, and Bhutan.
           </p>
           <ul className="mt-5 space-y-3 text-sm text-[#3A4250]">
@@ -36,7 +36,7 @@ export default function ContactPage() {
           </ul>
           <a
             href={`mailto:${SITE_EMAIL}`}
-            className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#7C6C4F] hover:text-[#1C2541]"
+            className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#716148] hover:text-[#1A2138]"
           >
             {SITE_EMAIL}
           </a>

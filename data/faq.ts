@@ -16,12 +16,12 @@ export const faqs: FAQ[] = [
   {
     question: "What countries does South Asia Expert cover?",
     answer:
-      "SouthAsiaExpert covers Bangladesh, India, Sri Lanka, Nepal, and Bhutan. Pakistan is covered separately at pakistancountryexpert.com. We provide country condition reports and expert witness evidence for asylum appeals and immigration tribunal proceedings involving nationals of these five South Asian countries.",
+      "South Asia Expert covers Bangladesh, India, Sri Lanka, Nepal, and Bhutan. Pakistan is covered separately at pakistancountryexpert.com. We provide country condition reports and expert witness evidence for asylum appeals and immigration tribunal proceedings involving nationals of these five South Asian countries.",
   },
   {
-    question: "Is SouthAsiaExpert politically neutral?",
+    question: "Is South Asia Expert politically neutral?",
     answer:
-      "Yes. SouthAsiaExpert is an impartial expert witness matching service, not a diaspora organisation, political campaign, or advocacy group. We connect UK solicitors with independent country experts who assess conditions objectively for tribunals, regardless of which political party, religious community, or profile the appellant belongs to. Our content covers opposing claim types with equal depth — for example BNP and Awami League political claims, Tamil diaspora and Sri Lankan government risk profiles, and majority and minority religious persecution — because expert evidence must reflect country conditions as they are, not advance any side in a dispute.",
+      "Yes. South Asia Expert is an impartial expert witness matching service, not a diaspora organisation, political campaign, or advocacy group. We connect counsel with independent country experts who assess conditions objectively for tribunals, regardless of which political party, religious community, or profile the appellant belongs to. Our content covers opposing claim types with equal depth — for example BNP and Awami League political claims, Tamil diaspora and Sri Lankan government risk profiles, and majority and minority religious persecution — because expert evidence must reflect country conditions as they are, not advance any side in a dispute.",
   },
   {
     question: "What happened in Bangladesh in August 2024?",
@@ -36,7 +36,7 @@ export const faqs: FAQ[] = [
   {
     question: "Is India a safe country for asylum?",
     answer:
-      "India is not a designated safe third country in UK asylum law and claims must be assessed on their merits. While India has a functioning state and judiciary, state protection is inconsistent for certain minority groups, particularly in states governed by BJP-aligned administrations. Expert witnesses assess the specific profile and viability of internal relocation.",
+      "India is not a designated safe third country in asylum law and claims must be assessed on their merits. While India has a functioning state and judiciary, state protection is inconsistent for certain minority groups, particularly in states governed by BJP-aligned administrations. Expert witnesses assess the specific profile and viability of internal relocation.",
   },
   {
     question: "Are LGBTQ+ asylum claims from India valid post-decriminalisation?",
@@ -46,7 +46,7 @@ export const faqs: FAQ[] = [
   {
     question: "Why is expert evidence especially important in Nepal cases?",
     answer:
-      "Unlike Somalia, Pakistan, or Sri Lanka, Nepal has no current UK Upper Tribunal country guidance. There are no binding country guidance findings from the UK tribunal on conditions in Nepal. Independent expert evidence is especially valuable as the tribunal must rely on expert analysis rather than country guidance presumptions.",
+      "Unlike Somalia, Pakistan, or Sri Lanka, Nepal has no current UK Upper Tribunal country guidance. There are no binding country guidance findings from the tribunal on conditions in Nepal. Independent expert evidence is especially valuable as the tribunal must rely on expert analysis rather than country guidance presumptions.",
   },
   {
     question: "How does the Bangladesh political transition affect existing claims?",
@@ -59,9 +59,9 @@ export const faqs: FAQ[] = [
       "Send a brief via the form or email. For Legal Aid cases, obtain LAA prior authority first. Provide the AIR, RFRL, witness statement, relevant CPINs, and a detailed letter of instruction. Allow 2 to 4 weeks for a standard report.",
   },
   {
-    question: "Are South Asia expert reports Legal Aid compatible?",
+    question: "Are South Asia expert reports funding-compatible?",
     answer:
-      "Yes. SouthAsiaExpert provides LAA-compatible rates for all major South Asian asylum profiles. Prior authority must be obtained from the Legal Aid Agency before instruction. Include the expert CV, proposed scope, and fee estimate in your prior authority application.",
+      "Yes. South Asia Expert provides LAA-compatible rates for all major South Asian asylum profiles. Prior authority must be obtained from the Legal Aid Agency before instruction. Include the expert CV, proposed scope, and fee estimate in your prior authority application.",
   },
   {
     question: "What languages do South Asia experts cover?",
@@ -76,6 +76,6 @@ export const faqs: FAQ[] = [
   {
     question: "What is the EIN directory and how does it relate to South Asia experts?",
     answer:
-      "The Expert Inquiry Network (EIN) directory lists experts covering Bangladesh, Bhutan, India, Myanmar, Nepal, Pakistan, Sri Lanka, and Tibet. SouthAsiaExpert connects UK solicitors with qualified experts from this network for tribunal-ready country condition reports.",
+      "The Expert Inquiry Network (EIN) directory lists experts covering Bangladesh, Bhutan, India, Myanmar, Nepal, Pakistan, Sri Lanka, and Tibet. South Asia Expert connects counsel with qualified experts from this network for tribunal-ready country condition reports.",
   },
 ];

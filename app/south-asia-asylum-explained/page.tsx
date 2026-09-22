@@ -9,9 +9,9 @@ import { articleSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/ui/JsonLd";
 
 export const metadata = createMetadata({
-  title: "South Asian Asylum Claims UK | Bangladesh, India, Sri Lanka & Nepal Expert Evidence Guide",
+  title: "South Asian Asylum Claims | Bangladesh, India, Sri Lanka & Nepal Expert Evidence Guide",
   description:
-    "Complete guide to South Asian asylum claims in UK tribunals: Bangladesh political persecution, India Hindutva/minorities, Sri Lanka Tamil claims, Nepal caste, and expert evidence methodology.",
+    "Complete guide to South Asian asylum claims in tribunals: Bangladesh political persecution, India Hindutva/minorities, Sri Lanka Tamil claims, Nepal caste, and expert evidence methodology.",
   path: "/south-asia-asylum-explained",
 });
 
@@ -26,22 +26,22 @@ export default function SouthAsiaAsylumExplainedPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <JsonLd
         data={articleSchema({
-          title: "South Asian Asylum Claims in the UK: The Complete Guide for Solicitors",
+          title: "South Asian Asylum Claims: The Complete Guide for Solicitors",
           description:
-            "Complete guide to South Asian asylum claims in UK tribunals covering Bangladesh, India, Sri Lanka, Nepal, and Bhutan.",
+            "Complete guide to South Asian asylum claims in tribunals covering Bangladesh, India, Sri Lanka, Nepal, and Bhutan.",
           path: "/south-asia-asylum-explained",
         })}
       />
       <PageShell
-        title="South Asian Asylum Claims in the UK: The Complete Guide for Solicitors"
+        title="South Asian Asylum Claims: The Complete Guide for Solicitors"
         subtitle="Expert evidence, country guidance, CPINs, and profile-specific risk analysis for South Asian asylum appeals."
         breadcrumbs={crumbs}
       >
         <p className="text-[#3A4250] leading-relaxed">
-          South Asia is the second most significant asylum claim region in the UK after Sub-Saharan Africa. In the year
+          South Asia is the second most significant asylum claim region after Sub-Saharan Africa. In the year
           ending September 2025, Bangladesh, India, and Sri Lanka were among the nationalities with the highest number
           of asylum claims from visa holders. This guide explains the legal landscape, key profiles, country guidance
-          framework, and the critical role of expert evidence for UK immigration solicitors.
+          framework, and the critical role of expert evidence for immigration solicitors.
         </p>
         <p className="mt-4 text-[#3A4250] leading-relaxed">
           This guide is written for practitioners, not for any political or diaspora audience. It describes asylum
@@ -51,22 +51,22 @@ export default function SouthAsiaAsylumExplainedPage() {
           side instructs the expert.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C2541]">South Asia: Key Asylum Statistics</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#1A2138]">South Asia: Key Asylum Statistics</h2>
         <div className="mt-4 table-scroll overflow-x-auto">
           <table className="w-full min-w-[600px] border-collapse text-sm">
             <thead>
-              <tr className="border-b border-[#D8D4CC] bg-[#EBE6DC]">
-                <th className="px-4 py-3 text-left font-semibold text-[#1C2541]">Country</th>
-                <th className="px-4 py-3 text-left font-semibold text-[#1C2541]">UK Asylum Claim Volume</th>
-                <th className="px-4 py-3 text-left font-semibold text-[#1C2541]">Key Profiles</th>
-                <th className="px-4 py-3 text-left font-semibold text-[#1C2541]">Country Guidance?</th>
+              <tr className="border-b border-[#D4CDC2] bg-[#E8E2D8]">
+                <th className="px-4 py-3 text-left font-semibold text-[#1A2138]">Country</th>
+                <th className="px-4 py-3 text-left font-semibold text-[#1A2138]">UK Asylum Claim Volume</th>
+                <th className="px-4 py-3 text-left font-semibold text-[#1A2138]">Key Profiles</th>
+                <th className="px-4 py-3 text-left font-semibold text-[#1A2138]">Country Guidance?</th>
               </tr>
             </thead>
             <tbody>
               {countries.map((c) => (
-                <tr key={c.slug} className="border-b border-[#D8D4CC]">
+                <tr key={c.slug} className="border-b border-[#D4CDC2]">
                   <td className="px-4 py-3">
-                    <Link href={`/countries/${c.slug}`} className="font-medium text-[#7C6C4F] hover:underline">
+                    <Link href={`/countries/${c.slug}`} className="font-medium text-[#716148] hover:underline">
                       {c.title}
                     </Link>
                   </td>
@@ -79,7 +79,7 @@ export default function SouthAsiaAsylumExplainedPage() {
           </table>
         </div>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C2541]">Bangladesh: The Post-2024 Landscape</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#1A2138]">Bangladesh: The Post-2024 Landscape</h2>
         <p className="mt-4 text-[#3A4250] leading-relaxed">
           The most important recent development in South Asian asylum case law is the August 2024 fall of Sheikh
           Hasina&apos;s Awami League government. Following mass student protests, Hasina fled to India, fundamentally
@@ -93,10 +93,10 @@ export default function SouthAsiaAsylumExplainedPage() {
           persecution and LGBTQ+ criminalisation under section 377 PPC remain significant independent claim bases.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C2541]">India: The Hindutva Question</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#1A2138]">India: The Hindutva Question</h2>
         <p className="mt-4 text-[#3A4250] leading-relaxed">
           India generates growing asylum claim volumes driven by Hindutva and RSS targeting of Muslims, Sikh claims,
-          Christian minority persecution, caste discrimination, and political dissident persecution. The Home Office
+          Christian minority persecution, caste discrimination, and political dissident persecution. The decision-makers
           frequently deploys internal relocation arguments given India&apos;s size, but expert evidence can challenge
           this where Hindutva networks have national reach.
         </p>
@@ -106,7 +106,7 @@ export default function SouthAsiaAsylumExplainedPage() {
           legal protections and practical enforcement for minority communities.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C2541]">Sri Lanka: The KK Country Guidance Framework</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#1A2138]">Sri Lanka: The KK Country Guidance Framework</h2>
         <p className="mt-4 text-[#3A4250] leading-relaxed">
           KK and Others (Sri Lanka: Tamil) CG [2021] UKUT 00245 remains the leading country guidance for Tamil
           asylum claims. It established that Tamil asylum seekers with actual or imputed LTTE associations, high-profile
@@ -114,28 +114,28 @@ export default function SouthAsiaAsylumExplainedPage() {
           Expert witnesses assess individual profiles against this binding framework.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C2541]">Expert Evidence Without Country Guidance</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#1A2138]">Expert Evidence Without Country Guidance</h2>
         <p className="mt-4 text-[#3A4250] leading-relaxed">
-          For Bangladesh, India, Nepal, and Bhutan, where no current UK country guidance exists, independent expert
+          For Bangladesh, India, Nepal, and Bhutan, where no current country guidance exists, independent expert
           evidence is especially important. Expert reports provide detailed, country-specific analysis that goes beyond
-          what Home Office CPINs or standard country information covers, addressing the individual risk profile from
+          what official CPINs or standard country information covers, addressing the individual risk profile from
           the start. Tribunals must assess these claims on the merits of expert analysis rather than country guidance
           presumptions.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C2541]">CPIN Coverage for South Asia</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#1A2138]">CPIN Coverage for South Asia</h2>
         <p className="mt-4 text-[#3A4250] leading-relaxed">
-          Home Office CPINs cover political parties and religious minorities for Bangladesh, Sikh separatism and
+          official CPINs cover political parties and religious minorities for Bangladesh, Sikh separatism and
           Muslims for India, Tamils and LTTE for Sri Lanka, and general background for Nepal. Bhutan has limited
           coverage. CPINs may lag behind rapidly changing conditions, particularly for post-August 2024 Bangladesh.
           See our{" "}
-          <Link href="/cpin-country-guidance" className="font-semibold text-[#7C6C4F] hover:underline">
+          <Link href="/cpin-country-guidance" className="font-semibold text-[#716148] hover:underline">
             CPIN & Country Guidance page
           </Link>{" "}
           for the full South Asia CPIN table.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C2541]">The Role of Expert Evidence</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#1A2138]">The Role of Expert Evidence</h2>
         <p className="mt-4 text-[#3A4250] leading-relaxed">
           Expert witnesses provide independent, objective country condition reports compliant with CPR Part 35 and
           Immigration Tribunal Practice Direction paragraph 10. Reports address profile-specific risk, challenge generic

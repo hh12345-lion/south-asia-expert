@@ -31,7 +31,7 @@ export default function ServicesPage() {
         breadcrumbs={crumbs}
       >
         <p className="mb-8 text-[#3A4250] leading-relaxed">
-          SouthAsiaExpert provides eight specialist expert witness services for UK immigration solicitors, law firms, and
+          South Asia Expert provides eight specialist expert witness services for immigration solicitors, law firms, and
           Legal Aid practitioners. All reports are prepared by qualified South Asia country experts with current CPIN
           knowledge, country guidance expertise, and field research experience across Bangladesh, India, Sri Lanka,
           Nepal, and Bhutan.
@@ -45,11 +45,11 @@ export default function ServicesPage() {
         />
         <p className="mt-8 text-[#3A4250]">
           Questions about instructing an expert? See{" "}
-          <Link href="/how-to-instruct" className="font-semibold text-[#7C6C4F] hover:underline">
+          <Link href="/how-to-instruct" className="font-semibold text-[#716148] hover:underline">
             how matching works
           </Link>{" "}
           or{" "}
-          <Link href="/contact" className="font-semibold text-[#7C6C4F] hover:underline">
+          <Link href="/contact" className="font-semibold text-[#716148] hover:underline">
             brief an expert
           </Link>
           .

@@ -10,11 +10,11 @@ export function ProfileGeoContent({ blocks }: { blocks: ProfileGeoBlock[] }) {
           key={block.title}
           className={`rounded-none border p-6 ${
             block.type === "highlight"
-              ? "border-[#7C6C4F]/40 bg-[#7C6C4F]/5"
-              : "border-[#D8D4CC] bg-[#EBE6DC]"
+              ? "border-[#716148]/40 bg-[#716148]/5"
+              : "border-[#D4CDC2] bg-[#E8E2D8]"
           }`}
         >
-          <h2 className="break-words text-lg font-bold text-[#1C2541]">{block.title}</h2>
+          <h2 className="break-words text-lg font-bold text-[#1A2138]">{block.title}</h2>
           <p className="prose-safe mt-3 text-sm text-[#3A4250] leading-relaxed sm:text-base">{block.content}</p>
         </div>
       ))}

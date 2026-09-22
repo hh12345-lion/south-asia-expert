@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 import { caseTypes } from "@/data/case-types";
 
 export const metadata = createMetadata({
-  title: "South Asia Asylum Case Types | Expert Witness UK",
+  title: "South Asia Asylum Case Types | Expert",
   description:
     "South Asia expert witness evidence for FTT appeals, Upper Tribunal, Bangladesh political claims, India minority claims, Sri Lanka Tamil, deportation, and fresh claims.",
   path: "/case-types",
@@ -20,11 +20,11 @@ export default function CaseTypesPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="South Asia Asylum Case Types"
-        subtitle="Expert witness evidence for all major UK immigration tribunal proceedings involving South Asian nationals."
+        subtitle="Expert witness evidence for all major immigration tribunal proceedings involving South Asian nationals."
         breadcrumbs={crumbs}
       >
         <p className="mb-8 text-[#3A4250] leading-relaxed">
-          SouthAsiaExpert provides qualified country expert witnesses for First-tier Tribunal appeals, Upper Tribunal
+          South Asia Expert provides qualified country expert witnesses for First-tier Tribunal appeals, Upper Tribunal
           proceedings, Bangladesh political claims, India minority claims, Sri Lanka Tamil claims under KK [2021],
           deportation and removal, fresh claims, and certification challenges.
         </p>
@@ -37,11 +37,11 @@ export default function CaseTypesPage() {
         />
         <p className="mt-8 text-[#3A4250]">
           See also our{" "}
-          <Link href="/asylum-profiles" className="font-semibold text-[#7C6C4F] hover:underline">
+          <Link href="/asylum-profiles" className="font-semibold text-[#716148] hover:underline">
             asylum profiles hub
           </Link>{" "}
           and{" "}
-          <Link href="/countries" className="font-semibold text-[#7C6C4F] hover:underline">
+          <Link href="/countries" className="font-semibold text-[#716148] hover:underline">
             country pages
           </Link>
           .

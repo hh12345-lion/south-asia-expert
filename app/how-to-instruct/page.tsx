@@ -5,9 +5,9 @@ import { RelatedLinks } from "@/components/ui/RelatedLinks";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "How to Instruct a South Asia Expert Witness UK | Step-by-Step Guide",
+  title: "How to Instruct a South Asia Expert | Step-by-Step Guide",
   description:
-    "Step-by-step guide for UK solicitors on instructing a South Asia expert witness for asylum appeals, Legal Aid cases, and immigration tribunal proceedings.",
+    "Step-by-step guide for counsel on instructing a South Asia expert witness for asylum appeals, Legal Aid cases, and immigration tribunal proceedings.",
   path: "/how-to-instruct",
 });
 
@@ -35,7 +35,7 @@ const steps = [
   {
     n: 5,
     title: "Provide All Relevant Materials",
-    body: "Include the screening record, Asylum Interview Record (AIR), Home Office refusal letter (RFRL), client witness statement, any previous expert reports, and relevant CPINs and country guidance decisions.",
+    body: "Include the screening record, Asylum Interview Record (AIR), decision-makers refusal letter (RFRL), client witness statement, any previous expert reports, and relevant CPINs and country guidance decisions.",
   },
   {
     n: 6,
@@ -57,23 +57,23 @@ export default function HowToInstructPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="How matching a South Asia expert works"
-        subtitle="Seven steps for UK immigration solicitors and Legal Aid practitioners."
+        subtitle="Seven steps for immigration solicitors and Legal Aid practitioners."
         breadcrumbs={crumbs}
       >
         <p className="mb-8 max-w-3xl text-[#3A4250] leading-relaxed">
-          Experts instructed through SouthAsiaExpert are selected for academic and field-research qualifications, not
+          Experts instructed through South Asia Expert are selected for academic and field-research qualifications, not
           political alignment. The expert&apos;s duty is to the tribunal under CPR Part 35 — to provide impartial
           country analysis whether the solicitor acts for the appellant or the respondent, and regardless of which
           South Asian country or asylum profile is at issue.
         </p>
-        <div className="divide-y divide-[#D8D4CC] border-y border-[#D8D4CC]">
+        <div className="divide-y divide-[#D4CDC2] border-y border-[#D4CDC2]">
           {steps.map((s) => (
             <div key={s.n} className="grid grid-cols-[auto_1fr] gap-4 py-6 sm:gap-6">
-              <span className="font-display text-xs tabular-nums text-[#7C6C4F]">
+              <span className="font-display text-xs tabular-nums text-[#716148]">
                 {String(s.n).padStart(2, "0")}
               </span>
               <div>
-                <h2 className="font-display font-semibold text-[#1C2541]">{s.title}</h2>
+                <h2 className="font-display font-semibold text-[#1A2138]">{s.title}</h2>
                 <p className="mt-2 leading-relaxed text-[#3A4250]">{s.body}</p>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function HowToInstructPage() {
         />
         <Link
           href="/contact"
-          className="mt-8 inline-flex min-h-[44px] items-center bg-[#7C6C4F] px-6 py-3 font-semibold text-white hover:bg-[#1C2541]"
+          className="mt-8 inline-flex min-h-[44px] items-center bg-[#716148] px-6 py-3 font-semibold text-white hover:bg-[#1A2138]"
         >
           Brief an expert
         </Link>
