@@ -2,56 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://southasiaexpert.com</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://southasiaexpert.com/blog</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://southasiaexpert.com/blog/how-south-asian-experts-approach-translated-transliterated-evidence</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://southasiaexpert.com/blog/how-south-asian-experts-explain-limits-documentary-evidence</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://southasiaexpert.com/blog/how-south-asian-experts-handle-conflicting-sources-in-reports</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://southasiaexpert.com/cookie-policy</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>https://southasiaexpert.com/faq</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://southasiaexpert.com/privacy</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
   <url>
     <loc>https://southasiaexpert.com/terms</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
-  </url>
-  <url>
-    <loc>https://southasiaexpert.com/blog/how-south-asian-experts-explain-limits-documentary-evidence</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
 </urlset>

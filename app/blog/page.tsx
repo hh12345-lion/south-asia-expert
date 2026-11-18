@@ -7,7 +7,7 @@ import { getAllBlogPosts } from "@/lib/blog";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 
 export const metadata = createMetadata({
-  title: "Blog | South Asia Expert",
+  title: "South Asia Asylum Evidence Blog",
   description:
     "Articles for immigration solicitors on South Asia country expert evidence, source assessment, and instructing country experts.",
   path: "/blog",
@@ -94,6 +94,12 @@ export default function BlogIndexPage() {
             ))}
           </ul>
         )}
+        <section className="mt-12 space-y-3">
+          <h2 className="text-xl font-semibold text-[#1A2138]">About these articles</h2>
+          <p className="leading-relaxed text-[#3A4250]">
+            Written for solicitors, caseworkers and counsel handling South Asian asylum and immigration matters. The articles explain how country evidence is weighed and where an expert report can add to published material. They are general guidance, not legal advice for a particular case.
+          </p>
+        </section>
       </PageShell>
     </>
   );

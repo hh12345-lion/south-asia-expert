@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
-import { getBlogBySlug, getBlogSlugs } from "@/lib/blog";
+import { getBlogBySlug, getBlogSlugs, getAllBlogPosts } from "@/lib/blog";
 import { markdownToHtml } from "@/lib/markdown";
 import { BRIEF_CTA, FORM_HREF, SITE_NAME, SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
@@ -19,7 +19,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = getBlogBySlug(slug);
   if (!post) return {};
   const meta = createMetadata({
-    title: post.title,
+    // Shorter search title where the headline is too long for results (the on-page headline is unchanged).
+    title: post.seoTitle ?? post.title,
     description: post.description,
     path: `/blog/${post.slug}`,
   });
@@ -52,6 +53,10 @@ export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
   const post = getBlogBySlug(slug);
   if (!post) notFound();
+  // Cross-link posts so each has more than one internal link (previously only from /blog).
+  const morePosts = getAllBlogPosts()
+    .filter((p) => p.slug !== post.slug)
+    .slice(0, 3);
 
   const html = markdownToHtml(post.content);
   const url = `${SITE_URL}/blog/${post.slug}`;
@@ -117,6 +122,23 @@ export default async function BlogPostPage({ params }: PageProps) {
         <p className="mt-4 text-lg text-[#3A4250]">{post.description}</p>
 
         <div className="blog-prose mt-10" dangerouslySetInnerHTML={{ __html: html }} />
+
+        {morePosts.length > 0 ? (
+          <nav aria-labelledby="more-from-blog" className="mt-12">
+            <h2 id="more-from-blog" className="text-lg font-semibold">
+              More from the blog
+            </h2>
+            <ul className="mt-4 space-y-3">
+              {morePosts.map((p) => (
+                <li key={p.slug}>
+                  <Link href={`/blog/${p.slug}`} className="font-medium text-[#716148] hover:underline">
+                    {p.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ) : null}
 
         <p className="mt-12 border-t border-[#D4CDC2] pt-8 text-[15px]">
           <Link href="/blog" className="font-medium text-[#716148] hover:underline">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitDescription, fitTitle } from "./fit";
 import { SITE_URL } from "./constants";
 
 const OG_IMAGE_ALT = "South Asia Expert";
@@ -27,7 +28,11 @@ export function createMetadata({
   absoluteTitle?: boolean;
 }): Metadata {
   const url = `${SITE_URL}${path}`;
-  const resolvedTitle = absoluteTitle ? { absolute: title } : title;
+  // "Page | South Asia Expert" when it fits in 60 characters, otherwise a shortened page title (also stops
+  // titles that already end in the brand from getting it twice); descriptions fitted to 110–155 characters.
+  title = absoluteTitle ? title : fitTitle(title, "fit");
+  description = fitDescription(description);
+  const resolvedTitle = { absolute: title };
   return {
     title: resolvedTitle,
     description,

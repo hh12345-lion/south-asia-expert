@@ -1,4 +1,5 @@
 ---
+seoTitle: "Limits of Available Documentary Evidence"
 title: "How South Asian Country Experts Explain the Limits of Available Documentary Evidence"
 description: "How a South Asian country expert explains what documentary evidence can and cannot establish, from incomplete records to allegations, findings and unresolved matters."
 date: "2026-10-20"

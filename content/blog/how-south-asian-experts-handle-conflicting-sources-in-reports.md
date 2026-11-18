@@ -1,4 +1,5 @@
 ---
+seoTitle: "Handling Conflicting Sources in Expert Reports"
 title: "How South Asian Country Experts Handle Conflicting Sources in Expert Reports"
 description: "How a South Asian country expert assesses differing country sources by date, location, methodology and profile, and explains limitations in an expert report."
 date: "2026-09-21"
@@ -167,7 +168,7 @@ This may include:
 
 Focused instructions can help the expert understand which aspects of the available country evidence are material to the case.
 
-Solicitors looking for further information about the instruction process can also review the site's [How to Instruct](/how-to-instruct) page.
+Solicitors looking for further information about the instruction process can also review the site's [frequently asked questions](/faq) or [get in touch](/contact).
 
 ## When Conflicting Sources Cannot Be Fully Reconciled
 

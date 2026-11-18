@@ -1,4 +1,5 @@
 ---
+seoTitle: "Translated and Transliterated Country Evidence"
 title: "How South Asian Country Experts Approach Translated and Transliterated Country Evidence"
 description: "How a South Asian country expert considers translated and transliterated country evidence, including original sources, spelling variations, context and limitations."
 date: "2026-10-02"
@@ -193,7 +194,7 @@ Depending on the case, useful information may include:
 
 Clear instructions can help the expert understand whether the issue concerns the meaning of the source, its country context, identification of a person or place, or another specific question.
 
-Solicitors can review the [How to Instruct](/how-to-instruct) information for further details about briefing a South Asian country expert.
+Solicitors can review the [frequently asked questions](/faq) for further details about briefing a South Asian country expert, or [get in touch](/contact) directly.
 
 ## Distinguishing Translation From Expert Opinion
 
