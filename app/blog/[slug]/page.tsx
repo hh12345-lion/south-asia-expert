@@ -124,8 +124,8 @@ export default async function BlogPostPage({ params }: PageProps) {
         <div className="blog-prose mt-10" dangerouslySetInnerHTML={{ __html: html }} />
 
         {morePosts.length > 0 ? (
-          <nav aria-labelledby="more-from-blog" className="mt-12">
-            <h2 id="more-from-blog" className="text-lg font-semibold">
+          <nav aria-labelledby="more-from-blog" className="blog-prose mt-12">
+            <h2 id="more-from-blog">
               More from the blog
             </h2>
             <ul className="mt-4 space-y-3">

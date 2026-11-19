@@ -66,7 +66,10 @@ export function fitTitle(title: string, mode: "short" | "fit" = "short", brand: 
   }
   const withBrand = `${t} | ${brand}`;
   if ((mode === "fit" || t.length < MIN_TITLE) && withBrand.length <= MAX_TITLE) return withBrand;
-  return shortenTitle(t);
+  // A shortened title can end up under 30 characters ("FGM Country Expert Reports"); add the brand back when it fits.
+  const short = shortenTitle(t);
+  const branded = `${short} | ${brand}`;
+  return short.length < MIN_TITLE && branded.length <= MAX_TITLE ? branded : short;
 }
 
 /** Appended to descriptions under 110 characters so they are not flagged as too short. */
